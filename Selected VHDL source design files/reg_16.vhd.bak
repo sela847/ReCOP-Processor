@@ -1,0 +1,5 @@
+use ieee.std_logic_1164.all;
+entity reg_16 is
+	port(
+		signal clk : in std_logic;
+		

@@ -1,0 +1,12 @@
+entity PC is
+Port(
+
+
+)
+
+end entity;
+
+architecture a1 of PC is
+
+
+end architecture a1;
