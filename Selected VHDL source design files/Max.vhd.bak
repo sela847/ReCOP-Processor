@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.recop_types.all;
+use work.opcodes.all;
+
+entity Max is
+port (
+	Rz : in bit_16;
+	Rx : in bit_16;
+	output : out bit_16
+	);
+
+
+end Max;
