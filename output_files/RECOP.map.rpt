@@ -1,0 +1,432 @@
+Analysis & Synthesis report for RECOP
+Wed May 08 14:17:04 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "PC:inst|reg_16:PCreg"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed May 08 14:17:04 2024           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; RECOP                                           ;
+; Top-level Entity Name           ; pc_test                                         ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 0                                               ;
+; Total pins                      ; 51                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; pc_test            ; RECOP              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++---------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                  ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                       ; Library ;
++---------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; Selected VHDL source design files/recop_types.vhd ; yes             ; User VHDL File                     ; H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd ;         ;
+; Selected VHDL source design files/opcodes.vhd     ; yes             ; User VHDL File                     ; H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd     ;         ;
+; Selected VHDL source design files/PC.vhd          ; yes             ; User VHDL File                     ; H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd          ;         ;
+; Selected VHDL source design files/reg_16.vhd      ; yes             ; User VHDL File                     ; H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd      ;         ;
+; test/pc_test.bdf                                  ; yes             ; User Block Diagram/Schematic File  ; H:/Documents/701/ReCOP-Processor/test/pc_test.bdf                                  ;         ;
++---------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 0                   ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 0                   ;
+;     -- 7 input functions                    ; 0                   ;
+;     -- 6 input functions                    ; 0                   ;
+;     -- 5 input functions                    ; 0                   ;
+;     -- 4 input functions                    ; 0                   ;
+;     -- <=3 input functions                  ; 0                   ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 51                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; incrAddr[15]~output ;
+; Maximum fan-out                             ; 1                   ;
+; Total fan-out                               ; 51                  ;
+; Average fan-out                             ; 0.50                ;
++---------------------------------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |pc_test                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 51   ; 0            ; |pc_test            ; pc_test     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; PC:inst|reg_16:PCreg|reg_out[0..15]    ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 16 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                           ;
++----------------------------------+---------------------------+----------------------------------------+
+; Register name                    ; Reason for Removal        ; Registers Removed due to This Register ;
++----------------------------------+---------------------------+----------------------------------------+
+; PC:inst|reg_16:PCreg|reg_out[12] ; Stuck at GND              ; PC:inst|reg_16:PCreg|reg_out[15]       ;
+;                                  ; due to stuck port data_in ;                                        ;
++----------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "PC:inst|reg_16:PCreg" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; wr   ; Input ; Info     ; Stuck at GND           ;
++------+-------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 51                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Wed May 08 14:16:55 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RECOP -c RECOP
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/mux4_16.vhd
+    Info (12022): Found design unit 1: MUX4_16-arch File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd Line: 19
+    Info (12023): Found entity 1: MUX4_16 File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd Line: 8
+Info (12021): Found 1 design units, including 0 entities, in source file selected vhdl source design files/various_constants.vhd
+    Info (12022): Found design unit 1: various_constants File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/registers.vhd
+    Info (12022): Found design unit 1: registers-beh File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd Line: 48
+    Info (12023): Found entity 1: registers File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/registerfile.vhd
+    Info (12022): Found design unit 1: registerfile-SYN File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd Line: 60
+    Info (12023): Found entity 1: registerfile File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd Line: 44
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/regfile.vhd
+    Info (12022): Found design unit 1: regfile-beh File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 41
+    Info (12023): Found entity 1: regfile File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 11
+Info (12021): Found 1 design units, including 0 entities, in source file selected vhdl source design files/recop_types.vhd
+    Info (12022): Found design unit 1: recop_types File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/recop_pll.vhd
+    Info (12022): Found design unit 1: recop_pll-SYN File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd Line: 52
+    Info (12023): Found entity 1: recop_pll File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/prog_mem.vhd
+    Info (12022): Found design unit 1: prog_mem-SYN File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd Line: 53
+    Info (12023): Found entity 1: prog_mem File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/pll.vhd
+    Info (12022): Found design unit 1: pll-SYN File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd Line: 52
+    Info (12023): Found entity 1: pll File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd Line: 42
+Info (12021): Found 1 design units, including 0 entities, in source file selected vhdl source design files/opcodes.vhd
+    Info (12022): Found design unit 1: opcodes File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/memory_model.vhd
+    Info (12022): Found design unit 1: memory-beh File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd Line: 27
+    Info (12023): Found entity 1: memory File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/memory_arbiter.vhd
+    Info (12022): Found design unit 1: memory_arbiter-behaviour File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd Line: 35
+    Info (12023): Found entity 1: memory_arbiter File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/data_mem.vhd
+    Info (12022): Found design unit 1: data_mem-SYN File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd Line: 55
+    Info (12023): Found entity 1: data_mem File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/alu.vhd
+    Info (12022): Found design unit 1: alu-combined File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 34
+    Info (12023): Found entity 1: alu File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file recopblockdiagram.bdf
+    Info (12023): Found entity 1: RecopBlockDiagram
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/pc.vhd
+    Info (12022): Found design unit 1: PC-a1 File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 18
+    Info (12023): Found entity 1: PC File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/reg_16.vhd
+    Info (12022): Found design unit 1: reg_16-behave File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd Line: 18
+    Info (12023): Found entity 1: reg_16 File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/instr_combine.vhd
+    Info (12022): Found design unit 1: instr_combine-behave File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd Line: 17
+    Info (12023): Found entity 1: instr_combine File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/instruction_reg.vhd
+    Info (12022): Found design unit 1: instruction_reg-behave File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd Line: 27
+    Info (12023): Found entity 1: instruction_reg File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/reg_32.vhd
+    Info (12022): Found design unit 1: reg_32-behave File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd Line: 18
+    Info (12023): Found entity 1: reg_32 File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd Line: 8
+Info (12021): Found 0 design units, including 0 entities, in source file selected vhdl source design files/control_unit.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/max.vhd
+    Info (12022): Found design unit 1: Max-behavior File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd Line: 18
+    Info (12023): Found entity 1: Max File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file test/pc_test.bdf
+    Info (12023): Found entity 1: pc_test
+Info (12127): Elaborating entity "pc_test" for the top level hierarchy
+Info (12128): Elaborating entity "PC" for hierarchy "PC:inst"
+Warning (10541): VHDL Signal Declaration warning at PC.vhd(13): used implicit default value for signal "instAddressIncremented" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 13
+Warning (10036): Verilog HDL or VHDL warning at PC.vhd(19): object "tempAddress" assigned a value but never read File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 19
+Warning (10540): VHDL Signal Declaration warning at PC.vhd(21): used explicit default value for signal "reg_write" because signal was never assigned a value File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at PC.vhd(44): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 44
+Info (12128): Elaborating entity "reg_16" for hierarchy "PC:inst|reg_16:PCreg" File: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 34
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "incrAddr[15]" is stuck at GND
+    Warning (13410): Pin "incrAddr[14]" is stuck at GND
+    Warning (13410): Pin "incrAddr[13]" is stuck at GND
+    Warning (13410): Pin "incrAddr[12]" is stuck at GND
+    Warning (13410): Pin "incrAddr[11]" is stuck at GND
+    Warning (13410): Pin "incrAddr[10]" is stuck at GND
+    Warning (13410): Pin "incrAddr[9]" is stuck at GND
+    Warning (13410): Pin "incrAddr[8]" is stuck at GND
+    Warning (13410): Pin "incrAddr[7]" is stuck at GND
+    Warning (13410): Pin "incrAddr[6]" is stuck at GND
+    Warning (13410): Pin "incrAddr[5]" is stuck at GND
+    Warning (13410): Pin "incrAddr[4]" is stuck at GND
+    Warning (13410): Pin "incrAddr[3]" is stuck at GND
+    Warning (13410): Pin "incrAddr[2]" is stuck at GND
+    Warning (13410): Pin "incrAddr[1]" is stuck at GND
+    Warning (13410): Pin "incrAddr[0]" is stuck at GND
+    Warning (13410): Pin "instAddr[15]" is stuck at GND
+    Warning (13410): Pin "instAddr[14]" is stuck at GND
+    Warning (13410): Pin "instAddr[13]" is stuck at GND
+    Warning (13410): Pin "instAddr[12]" is stuck at GND
+    Warning (13410): Pin "instAddr[11]" is stuck at GND
+    Warning (13410): Pin "instAddr[10]" is stuck at GND
+    Warning (13410): Pin "instAddr[9]" is stuck at GND
+    Warning (13410): Pin "instAddr[8]" is stuck at GND
+    Warning (13410): Pin "instAddr[7]" is stuck at GND
+    Warning (13410): Pin "instAddr[6]" is stuck at GND
+    Warning (13410): Pin "instAddr[5]" is stuck at GND
+    Warning (13410): Pin "instAddr[4]" is stuck at GND
+    Warning (13410): Pin "instAddr[3]" is stuck at GND
+    Warning (13410): Pin "instAddr[2]" is stuck at GND
+    Warning (13410): Pin "instAddr[1]" is stuck at GND
+    Warning (13410): Pin "instAddr[0]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "write_pc"
+    Warning (15610): No output dependent on input pin "reset"
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "addr[15]"
+    Warning (15610): No output dependent on input pin "addr[14]"
+    Warning (15610): No output dependent on input pin "addr[13]"
+    Warning (15610): No output dependent on input pin "addr[12]"
+    Warning (15610): No output dependent on input pin "addr[11]"
+    Warning (15610): No output dependent on input pin "addr[10]"
+    Warning (15610): No output dependent on input pin "addr[9]"
+    Warning (15610): No output dependent on input pin "addr[8]"
+    Warning (15610): No output dependent on input pin "addr[7]"
+    Warning (15610): No output dependent on input pin "addr[6]"
+    Warning (15610): No output dependent on input pin "addr[5]"
+    Warning (15610): No output dependent on input pin "addr[4]"
+    Warning (15610): No output dependent on input pin "addr[3]"
+    Warning (15610): No output dependent on input pin "addr[2]"
+    Warning (15610): No output dependent on input pin "addr[1]"
+    Warning (15610): No output dependent on input pin "addr[0]"
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 32 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4875 megabytes
+    Info: Processing ended: Wed May 08 14:17:04 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:03
+
+

@@ -45,8 +45,9 @@ begin
 		      tempAddress<=(others=>'0');
 		  elsif (rising_edge(clk)) then
             -- Increment the input address by 4 and store in a temporary signal
-            tempAddress <= std_logic_vector(unsigned(inputAddress) + 1);
+            tempAddress <= std_logic_vector((unsigned(inputAddress(14 downto 0)) + 1));
         end if;
     end process;
+	 instAddressIncremented <= tempAddress;
     
 end architecture a1;

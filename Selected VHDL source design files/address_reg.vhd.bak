@@ -1,0 +1,15 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.recop_types.all;
+entity address_reg is
+    Port (
+        inputAddress : in bit_16;
+		  write_pc		: in std_logic;
+		  rst				: in STD_LOGIC;
+        instAddress : out bit_16;
+		  instAddressIncremented: out bit_16;
+        clk : in STD_LOGIC
+    );
+end entity address_reg;
