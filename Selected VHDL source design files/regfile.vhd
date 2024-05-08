@@ -28,7 +28,7 @@ entity regfile is
 		aluout: in bit_16;
 		rz_max: in bit_16;
 		sip_hold: in bit_16;
-		er_temp: in bit_1;
+		--er_temp: in bit_1;
 		-- R7 for writing to lower byte of dpcr
 		r7 : out bit_16;
 		dprr_res : in bit_1;
@@ -46,7 +46,9 @@ begin
 	r7 <=regs(7);
 
 	-- mux selecting input data to be written to Rz
-	input_select: process (rf_input_sel, ir_operand, dm_out, aluout, rz_max, sip_hold, er_temp, dprr_res_reg)
+	input_select: process (rf_input_sel, ir_operand, dm_out, aluout, rz_max, sip_hold, 
+	--er_temp,
+	dprr_res_reg)
     begin
         case rf_input_sel is
             when "000" =>
@@ -60,7 +62,8 @@ begin
             when "101" =>
                 data_input_z <= sip_hold;
             when "110" =>
-                data_input_z <= X"000"&"000"&er_temp;
+                data_input_z <= X"000"&"000";
+					 --&er_temp;
             when "111" =>
                 data_input_z <= dm_out;
             when others =>

@@ -7,7 +7,7 @@ use work.recop_types.all;
 use work.various_constants.all;
 use work.opcodes.all;
 
-entity memory_model is
+entity memory is
 	port (
 		clk: in bit_1 := '0';
 		--pm_rd: in bit_1 := '0';
@@ -22,9 +22,9 @@ entity memory_model is
 		dm_indata: in bit_16 := X"0000"
 		
 		);
-end memory_model;
+end memory;
 
-architecture beh of memory_model is
+architecture beh of memory is
 	type memory_array is array (31 downto 0) of bit_16;
 	signal memory: memory_array:=(X"abcd",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",
 	--X"0002",
