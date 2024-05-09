@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.recop_types.all;
+use work.opcodes.all;
+
+entity dprr is
+port (
+	input_data_from_noc: in bit_32;
+	output_data: out bit_32;
+
+	);
+
+end dprr;
+
+architecture behavior of dprr is
+
+begin
+
+
+end architecture behavior;

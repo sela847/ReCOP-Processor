@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.recop_types.all;
+use work.opcodes.all;
+
+entity dpp_Reg is
+port (
+	);
+
+end dpprReg;
+
+architecture behavior of dpprReg is
+
+begin
+
+
+end architecture behavior;

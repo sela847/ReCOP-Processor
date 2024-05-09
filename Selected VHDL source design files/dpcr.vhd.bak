@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.recop_types.all;
+use work.opcodes.all;
+
+entity dpcr is
+port (
+	input_data: in bit_16;
+	output_data: out bit_16;
+
+	);
+
+end dpcr;
+
+architecture behavior of dpcr is
+
+begin
+
+
+end architecture behavior;
