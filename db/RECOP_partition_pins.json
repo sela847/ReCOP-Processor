@@ -2,7 +2,136 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "incrAddr[14]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[13]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[12]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[11]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[14]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[13]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[12]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[11]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[1]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

@@ -1,0 +1,508 @@
+m255
+K4
+z2
+!s11e vcom 2020.2 2020.04, Apr 19 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/Documents/701/ReCOP-Processor/simulation/modelsim
+T_opt
+!s110 1715225925
+Vh4ZA0BlB?aZz=2MTz[Yem3
+Z1 04 19 12 work pc_test_vhd_vec_tst pc_test_arch 1
+=1-cc96e52184dd-663c4544-191-45e0
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OE;O;2020.2;71
+R0
+T_opt1
+!s110 1715225932
+VVmUQ<noml1z?B9zW9l0_A2
+R1
+=1-cc96e52184dd-663c454b-260-479c
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+R0
+Eaddress_reg
+Z4 w1715137979
+Z5 DPx4 work 11 recop_types 0 22 KQ6cCkGdcRENB@XUJ8N^n1
+Z6 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 6
+R0
+Z9 8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd
+Z10 FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd
+l0
+L6 1
+V4kZ]fm<bjk60^VZ<[<mn<0
+!s100 I4AHXEM]S>3Ddc23<mRJM3
+Z11 OE;C;2020.2;71
+32
+Z12 !s110 1715226508
+!i10b 1
+Z13 !s108 1715226508.000000
+Z14 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd|
+Z15 !s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Abehave
+R5
+R6
+R7
+R8
+DEx4 work 11 address_reg 0 22 4kZ]fm<bjk60^VZ<[<mn<0
+!i122 6
+l22
+L20 5
+VnhGmN;BFVlI_bHB7SlW8[2
+!s100 WQO@PIHFEA_g@1S?2D`]a0
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Ememory_arbiter
+Z18 w1714956958
+R5
+Z19 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z20 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R7
+R8
+!i122 7
+R0
+Z21 8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd
+Z22 FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd
+l0
+Z23 L11 1
+V@[iTgK5XMEhzDESj22b>00
+!s100 ?[0`N_8o5U4MoNV:=?SZA2
+R11
+32
+Z24 !s110 1715226512
+!i10b 1
+Z25 !s108 1715226511.000000
+Z26 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd|
+Z27 !s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd|
+!i113 0
+R16
+R17
+Abehaviour
+R5
+R19
+R20
+R7
+R8
+DEx4 work 14 memory_arbiter 0 22 @[iTgK5XMEhzDESj22b>00
+!i122 7
+l37
+L35 35
+V<Lik:;1ciED<^Bb4V^a?k2
+!s100 fH6<8ajf@QI5:EeIPF7EY0
+R11
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R16
+R17
+Popcodes
+R5
+R7
+R8
+!i122 8
+Z28 w1714956959
+R0
+8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd
+FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd
+l0
+L7 1
+VmmCTiQc_@dGNQW7ZkNd_V2
+!s100 YH6S8C_M@a4iM?d77]?=_1
+R11
+32
+!s110 1715226513
+!i10b 1
+!s108 1715226513.000000
+!s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd|
+!s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd|
+!i113 0
+R16
+R17
+Epc
+Z29 w1715224842
+R5
+R6
+R7
+R8
+!i122 9
+R0
+Z30 8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd
+Z31 FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd
+l0
+L7 1
+VZF0[cZI57b[:R?9]EZ3:@0
+!s100 I5CaYjEXJm9S`_h2M1IL00
+R11
+32
+Z32 !s110 1715226514
+!i10b 1
+Z33 !s108 1715226514.000000
+Z34 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd|
+Z35 !s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd|
+!i113 0
+R16
+R17
+Aa1
+R5
+R6
+R7
+R8
+DEx4 work 2 pc 0 22 ZF0[cZI57b[:R?9]EZ3:@0
+!i122 9
+l32
+L18 36
+ViDC^]iAA=OAVdf;N4A:g32
+!s100 TY=]R0P_bBNXglVhT<FKm1
+R11
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 0
+R16
+R17
+Epc_test
+Z36 w1715226253
+R7
+R8
+!i122 2
+R0
+Z37 8H:/Documents/701/ReCOP-Processor/test/pc_test.vhd
+Z38 FH:/Documents/701/ReCOP-Processor/test/pc_test.vhd
+l0
+L24 1
+VBhFHkjJSJ=f0T3Ob9SAGM1
+!s100 glmhF5dzgKJD8@kR=aLn61
+R11
+32
+Z39 !s110 1715226306
+!i10b 1
+Z40 !s108 1715226305.000000
+Z41 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/test/pc_test.vhd|
+Z42 !s107 H:/Documents/701/ReCOP-Processor/test/pc_test.vhd|
+!i113 0
+R16
+R17
+Abdf_type
+R7
+R8
+DEx4 work 7 pc_test 0 22 BhFHkjJSJ=f0T3Ob9SAGM1
+!i122 2
+l50
+L36 28
+VA6iX]nY?Q^NohOLHci?1b1
+!s100 _cF;SEe[;n8e`6XfXH6oO0
+R11
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 0
+R16
+R17
+Epc_test_vhd_vec_tst
+Z43 w1715225136
+R7
+R8
+!i122 3
+R0
+Z44 8H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+Z45 FH:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+l0
+L31 1
+VFX[zziEYYBKR9>@RQaH@`0
+!s100 TO9@fhgBB?QC7kzfO4`7W0
+R11
+32
+Z46 !s110 1715226308
+!i10b 1
+Z47 !s108 1715226308.000000
+Z48 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht|
+Z49 !s107 H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht|
+!i113 0
+R16
+R17
+Apc_test_arch
+R7
+R8
+DEx4 work 19 pc_test_vhd_vec_tst 0 22 FX[zziEYYBKR9>@RQaH@`0
+!i122 3
+l52
+L33 186
+V:X^kNAcIUfhI4db75XPzU1
+!s100 Q<2jOo?dlSJ2AfOEb4F^82
+R11
+32
+R46
+!i10b 1
+R47
+R48
+R49
+!i113 0
+R16
+R17
+Precop_types
+R7
+R8
+!i122 10
+R28
+R0
+8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd
+FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd
+l0
+L5 1
+VKQ6cCkGdcRENB@XUJ8N^n1
+!s100 R6CUllbaKNIH93^V>@?_U3
+R11
+32
+!s110 1715226515
+!i10b 1
+Z50 !s108 1715226515.000000
+!s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd|
+!s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd|
+!i113 0
+R16
+R17
+Ereg_16
+R28
+Z51 DPx4 work 7 opcodes 0 22 mmCTiQc_@dGNQW7ZkNd_V2
+R5
+R6
+R7
+R8
+!i122 11
+R0
+Z52 8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd
+Z53 FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd
+l0
+L8 1
+VzEHkS4;Ud]d[fDF?MBVQ20
+!s100 mcaGPoVWfhDj@:2A:bM4a0
+R11
+32
+Z54 !s110 1715226516
+!i10b 1
+R50
+Z55 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd|
+Z56 !s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd|
+!i113 0
+R16
+R17
+Abehave
+R51
+R5
+R6
+R7
+R8
+DEx4 work 6 reg_16 0 22 zEHkS4;Ud]d[fDF?MBVQ20
+!i122 11
+l19
+Z57 L18 15
+Vzn4CBmm1ZaRkhidMhegFR1
+!s100 Bo=iU3OZog[6?d>?39E2Q3
+R11
+32
+R54
+!i10b 1
+R50
+R55
+R56
+!i113 0
+R16
+R17
+Ereg_32
+R28
+R51
+R5
+R6
+R7
+R8
+!i122 12
+R0
+Z58 8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd
+Z59 FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd
+l0
+L8 1
+VJfLcVg_P02z4o6<EUlJO13
+!s100 TdESh0Hl9;m[YkV?T>FGz3
+R11
+32
+Z60 !s110 1715226517
+!i10b 1
+Z61 !s108 1715226516.000000
+Z62 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd|
+Z63 !s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd|
+!i113 0
+R16
+R17
+Abehave
+R51
+R5
+R6
+R7
+R8
+DEx4 work 6 reg_32 0 22 JfLcVg_P02z4o6<EUlJO13
+!i122 12
+l19
+R57
+V67X<N]EN;nDYXD7U;F<NH0
+!s100 BnJD=XWgZ>TMF`Ui:0VfB0
+R11
+32
+R60
+!i10b 1
+R61
+R62
+R63
+!i113 0
+R16
+R17
+Eregfile
+Z64 w1715217360
+Z65 DPx4 work 17 various_constants 0 22 FOg;R=SI[HUP4kOGMj6L;2
+R5
+R6
+R7
+R8
+!i122 13
+R0
+Z66 8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd
+Z67 FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd
+l0
+R23
+VMUWBWO3Q<4<ZhFJ=I6dDj2
+!s100 c:`2c>Jzc`Od0V]Sj8DfE1
+R11
+32
+R60
+!i10b 1
+Z68 !s108 1715226517.000000
+Z69 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd|
+Z70 !s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd|
+!i113 0
+R16
+R17
+Abeh
+R65
+R5
+R6
+R7
+R8
+DEx4 work 7 regfile 0 22 MUWBWO3Q<4<ZhFJ=I6dDj2
+!i122 13
+l45
+L41 54
+VYThW46UQPCQz;AB=Tiamn2
+!s100 ?Yo4Iz:SD<dl1_P2fQz[S1
+R11
+32
+R60
+!i10b 1
+R68
+R69
+R70
+!i113 0
+R16
+R17
+Eregisters
+R28
+R51
+R5
+R19
+R20
+R7
+R8
+!i122 14
+R0
+Z71 8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd
+Z72 FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd
+l0
+L12 1
+Van3XYhgWg6a3kF:V[=9gB2
+!s100 jDLzJhjSzV^oliHAdQDz[3
+R11
+32
+Z73 !s110 1715226518
+!i10b 1
+Z74 !s108 1715226518.000000
+Z75 !s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd|
+Z76 !s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd|
+!i113 0
+R16
+R17
+Abeh
+R51
+R5
+R19
+R20
+R7
+R8
+DEx4 work 9 registers 0 22 an3XYhgWg6a3kF:V[=9gB2
+!i122 14
+l50
+L48 116
+Vh0jo[9X4N_zJD3`2chlcl1
+!s100 2bK7:cVc[ee`?Ef`RK5Yg2
+R11
+32
+R73
+!i10b 1
+R74
+R75
+R76
+!i113 0
+R16
+R17
+Pvarious_constants
+R5
+R7
+R8
+!i122 15
+R28
+R0
+8H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd
+FH:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd
+l0
+L7 1
+VFOg;R=SI[HUP4kOGMj6L;2
+!s100 h[mbICG[_VLW<J`?I`[O]1
+R11
+32
+!s110 1715226519
+!i10b 1
+R74
+!s90 -reportprogress|300|-work|work|H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd|
+!s107 H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd|
+!i113 0
+R16
+R17

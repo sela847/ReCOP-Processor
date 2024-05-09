@@ -18,7 +18,7 @@ end entity PC;
 architecture a1 of PC is
     signal tempAddress : STD_LOGIC_VECTOR(14 downto 0);
 	 
-	 signal reg_write : std_logic := '0';
+	 --signal reg_write : std_logic := '0';
 	 component reg_16 is
 	 port(
 		signal clk : in std_logic;
@@ -33,7 +33,7 @@ begin
 	
 	PCreg: reg_16 port map (
 	clk => clk,
-	wr => reg_write,
+	wr => write_pc,
 	rst => rst,
 	reg_input => inputAddress,
 	reg_out => instAddress
@@ -48,6 +48,6 @@ begin
             tempAddress <= std_logic_vector((unsigned(inputAddress(14 downto 0)) + 1));
         end if;
     end process;
-	 instAddressIncremented <= tempAddress;
+	 instAddressIncremented <= '0' & tempAddress;
     
 end architecture a1;

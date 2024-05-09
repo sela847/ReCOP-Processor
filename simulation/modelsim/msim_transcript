@@ -1,0 +1,1227 @@
+# Reading pref.tcl
+# //  ModelSim SE 2020.2 Apr 19 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do RECOP_run_msim_rtl_vhdl.do
+# if ![file isdirectory vhdl_libs] {
+# 	file mkdir vhdl_libs
+# }
+# 
+# vlib vhdl_libs/altera
+# vmap altera ./vhdl_libs/altera
+# Model Technology ModelSim SE vmap 2020.2 Lib Mapping Utility 2020.04 Apr 19 2020
+# vmap altera ./vhdl_libs/altera 
+# Copying C:/modeltech_2020.2/win32/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# vcom -93 -work altera {c:/intelfpga/18.1/quartus/eda/sim_lib/altera_syn_attributes.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:37:05 on May 09,2024
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga/18.1/quartus/eda/sim_lib/altera_syn_attributes.vhd 
+# -- Loading package STANDARD
+# -- Compiling package altera_syn_attributes
+# End time: 15:37:06 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {c:/intelfpga/18.1/quartus/eda/sim_lib/altera_standard_functions.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:37:06 on May 09,2024
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga/18.1/quartus/eda/sim_lib/altera_standard_functions.vhd 
+# -- Loading package STANDARD
+# -- Compiling package altera_standard_functions
+# -- Compiling package body altera_standard_functions
+# -- Loading package altera_standard_functions
+# End time: 15:37:06 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {c:/intelfpga/18.1/quartus/eda/sim_lib/alt_dspbuilder_package.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:37:06 on May 09,2024
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga/18.1/quartus/eda/sim_lib/alt_dspbuilder_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package alt_dspbuilder_package
+# -- Compiling package body alt_dspbuilder_package
+# -- Loading package alt_dspbuilder_package
+# End time: 15:37:07 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {c:/intelfpga/18.1/quartus/eda/sim_lib/altera_europa_support_lib.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:37:07 on May 09,2024
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga/18.1/quartus/eda/sim_lib/altera_europa_support_lib.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package altera_europa_support_lib
+# -- Compiling package body altera_europa_support_lib
+# -- Loading package altera_europa_support_lib
+# End time: 15:37:07 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {c:/intelfpga/18.1/quartus/eda/sim_lib/altera_primitives_components.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:37:07 on May 09,2024
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga/18.1/quartus/eda/sim_lib/altera_primitives_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package dffeas_pack
+# -- Loading package dffeas_pack
+# -- Compiling package altera_primitives_components
+# End time: 15:37:08 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {c:/intelfpga/18.1/quartus/eda/sim_lib/altera_primitives.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:37:08 on May 09,2024
+# vcom -reportprogress 300 -93 -work altera c:/intelfpga/18.1/quartus/eda/sim_lib/altera_primitives.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GLOBAL
+# -- Compiling architecture BEHAVIOR of GLOBAL
+# -- Compiling entity CARRY
+# -- Compiling architecture BEHAVIOR of CARRY
+# -- Compiling entity CASCADE
+# -- Compiling architecture BEHAVIOR of CASCADE
+# -- Compiling entity CARRY_SUM
+# -- Compiling architecture BEHAVIOR of CARRY_SUM
+# -- Compiling entity EXP
+# -- Compiling architecture BEHAVIOR of EXP
+# -- Compiling entity SOFT
+# -- Compiling architecture BEHAVIOR of SOFT
+# -- Compiling entity OPNDRN
+# -- Compiling architecture BEHAVIOR of OPNDRN
+# -- Compiling entity ROW_GLOBAL
+# -- Compiling architecture BEHAVIOR of ROW_GLOBAL
+# -- Compiling entity TRI
+# -- Compiling architecture BEHAVIOR of TRI
+# -- Compiling entity LUT_INPUT
+# -- Compiling architecture BEHAVIOR of LUT_INPUT
+# -- Compiling entity LUT_OUTPUT
+# -- Compiling architecture BEHAVIOR of LUT_OUTPUT
+# -- Compiling entity latch
+# -- Compiling architecture BEHAVIOR of latch
+# -- Compiling entity dlatch
+# -- Compiling architecture BEHAVIOR of dlatch
+# -- Compiling entity PRIM_GDFF
+# -- Compiling architecture BEHAVIOR of PRIM_GDFF
+# -- Loading entity PRIM_GDFF
+# -- Compiling entity DFF
+# -- Compiling architecture BEHAVIOR of DFF
+# -- Compiling entity DFFE
+# -- Compiling architecture BEHAVIOR of DFFE
+# -- Compiling entity DFFEA
+# -- Compiling architecture BEHAVIOR of DFFEA
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Compiling entity DFFEAS
+# -- Compiling architecture vital_dffeas of dffeas
+# -- Compiling entity PRIM_GTFF
+# -- Compiling architecture BEHAVIOR of PRIM_GTFF
+# -- Loading entity PRIM_GTFF
+# -- Compiling entity TFF
+# -- Compiling architecture BEHAVIOR of TFF
+# -- Compiling entity TFFE
+# -- Compiling architecture BEHAVIOR of TFFE
+# -- Compiling entity PRIM_GJKFF
+# -- Compiling architecture BEHAVIOR of PRIM_GJKFF
+# -- Loading entity PRIM_GJKFF
+# -- Compiling entity JKFF
+# -- Compiling architecture BEHAVIOR of JKFF
+# -- Compiling entity JKFFE
+# -- Compiling architecture BEHAVIOR of JKFFE
+# -- Compiling entity PRIM_GSRFF
+# -- Compiling architecture BEHAVIOR of PRIM_GSRFF
+# -- Loading entity PRIM_GSRFF
+# -- Compiling entity SRFF
+# -- Compiling architecture BEHAVIOR of SRFF
+# -- Compiling entity SRFFE
+# -- Compiling architecture BEHAVIOR of SRFFE
+# -- Compiling entity clklock
+# -- Compiling architecture behavior of clklock
+# -- Compiling entity alt_inbuf
+# -- Compiling architecture BEHAVIOR of alt_inbuf
+# -- Compiling entity alt_outbuf
+# -- Compiling architecture BEHAVIOR of alt_outbuf
+# -- Compiling entity alt_outbuf_tri
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri
+# -- Compiling entity alt_iobuf
+# -- Compiling architecture BEHAVIOR of alt_iobuf
+# -- Compiling entity alt_inbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_inbuf_diff
+# -- Compiling entity alt_outbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_diff
+# -- Compiling entity alt_outbuf_tri_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri_diff
+# -- Compiling entity alt_iobuf_diff
+# -- Compiling architecture BEHAVIOR of alt_iobuf_diff
+# -- Compiling entity alt_bidir_diff
+# -- Compiling architecture BEHAVIOR of alt_bidir_diff
+# -- Compiling entity alt_bidir_buf
+# -- Compiling architecture BEHAVIOR of alt_bidir_buf
+# End time: 15:37:09 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/lpm
+# vmap lpm ./vhdl_libs/lpm
+# Model Technology ModelSim SE vmap 2020.2 Lib Mapping Utility 2020.04 Apr 19 2020
+# vmap lpm ./vhdl_libs/lpm 
+# Modifying modelsim.ini
+# vcom -93 -work lpm {c:/intelfpga/18.1/quartus/eda/sim_lib/220pack.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:37:09 on May 09,2024
+# vcom -reportprogress 300 -93 -work lpm c:/intelfpga/18.1/quartus/eda/sim_lib/220pack.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package LPM_COMPONENTS
+# End time: 15:37:10 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work lpm {c:/intelfpga/18.1/quartus/eda/sim_lib/220model.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:37:10 on May 09,2024
+# vcom -reportprogress 300 -93 -work lpm c:/intelfpga/18.1/quartus/eda/sim_lib/220model.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package LPM_COMMON_CONVERSION
+# -- Compiling package body LPM_COMMON_CONVERSION
+# -- Loading package LPM_COMMON_CONVERSION
+# -- Compiling package LPM_HINT_EVALUATION
+# -- Compiling package body LPM_HINT_EVALUATION
+# -- Loading package LPM_HINT_EVALUATION
+# -- Compiling package LPM_DEVICE_FAMILIES
+# -- Compiling package body LPM_DEVICE_FAMILIES
+# -- Loading package LPM_DEVICE_FAMILIES
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity LPM_CONSTANT
+# -- Compiling architecture LPM_SYN of LPM_CONSTANT
+# -- Compiling entity LPM_INV
+# -- Compiling architecture LPM_SYN of LPM_INV
+# -- Compiling entity lpm_and
+# -- Compiling architecture LPM_SYN of lpm_and
+# -- Compiling entity LPM_OR
+# -- Compiling architecture LPM_SYN of LPM_OR
+# -- Compiling entity LPM_XOR
+# -- Compiling architecture LPM_SYN of LPM_XOR
+# -- Compiling entity LPM_BUSTRI
+# -- Compiling architecture LPM_SYN of LPM_BUSTRI
+# -- Compiling entity LPM_MUX
+# -- Compiling architecture LPM_SYN of LPM_MUX
+# -- Compiling entity LPM_DECODE
+# -- Compiling architecture LPM_SYN of LPM_DECODE
+# -- Compiling entity LPM_CLSHIFT
+# -- Compiling architecture LPM_SYN of LPM_CLSHIFT
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity LPM_ADD_SUB_SIGNED
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB_SIGNED
+# -- Compiling entity LPM_ADD_SUB_UNSIGNED
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB_UNSIGNED
+# -- Loading entity LPM_ADD_SUB_SIGNED
+# -- Loading entity LPM_ADD_SUB_UNSIGNED
+# -- Compiling entity LPM_ADD_SUB
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB
+# -- Compiling entity LPM_COMPARE_SIGNED
+# -- Compiling architecture LPM_SYN of LPM_COMPARE_SIGNED
+# -- Compiling entity LPM_COMPARE_UNSIGNED
+# -- Compiling architecture LPM_SYN of LPM_COMPARE_UNSIGNED
+# -- Loading entity LPM_COMPARE_SIGNED
+# -- Loading entity LPM_COMPARE_UNSIGNED
+# -- Compiling entity LPM_COMPARE
+# -- Compiling architecture LPM_SYN of LPM_COMPARE
+# -- Loading package LPM_HINT_EVALUATION
+# -- Compiling entity LPM_MULT
+# -- Compiling architecture LPM_SYN of LPM_MULT
+# -- Compiling entity LPM_DIVIDE
+# -- Compiling architecture behave of lpm_divide
+# -- Compiling entity lpm_abs
+# -- Compiling architecture LPM_SYN of LPM_ABS
+# -- Loading package LPM_COMMON_CONVERSION
+# -- Compiling entity LPM_COUNTER
+# -- Compiling architecture LPM_SYN of LPM_COUNTER
+# -- Compiling entity LPM_LATCH
+# -- Compiling architecture LPM_SYN of LPM_LATCH
+# -- Compiling entity LPM_FF
+# -- Compiling architecture LPM_SYN of LPM_FF
+# -- Compiling entity LPM_SHIFTREG
+# -- Compiling architecture LPM_SYN of LPM_SHIFTREG
+# -- Loading package LPM_DEVICE_FAMILIES
+# -- Compiling entity LPM_RAM_DQ
+# -- Compiling architecture LPM_SYN of lpm_ram_dq
+# -- Compiling entity LPM_RAM_DP
+# -- Compiling architecture LPM_SYN of LPM_RAM_DP
+# -- Compiling entity LPM_RAM_IO
+# -- Compiling architecture LPM_SYN of lpm_ram_io
+# -- Compiling entity LPM_ROM
+# -- Compiling architecture LPM_SYN of lpm_rom
+# -- Compiling entity LPM_FIFO
+# -- Compiling architecture behavior of LPM_FIFO
+# -- Compiling entity LPM_FIFO_DC_DFFPIPE
+# -- Compiling architecture behavior of LPM_FIFO_DC_DFFPIPE
+# -- Compiling entity LPM_FIFO_DC_FEFIFO
+# -- Compiling architecture behavior of LPM_FIFO_DC_FEFIFO
+# -- Loading entity LPM_FIFO_DC_FEFIFO
+# -- Loading entity LPM_FIFO_DC_DFFPIPE
+# -- Compiling entity LPM_FIFO_DC_ASYNC
+# -- Compiling architecture behavior of LPM_FIFO_DC_ASYNC
+# -- Loading entity LPM_FIFO_DC_ASYNC
+# -- Compiling entity LPM_FIFO_DC
+# -- Compiling architecture behavior of LPM_FIFO_DC
+# -- Compiling entity LPM_INpad
+# -- Compiling architecture LPM_SYN of LPM_INpad
+# -- Compiling entity LPM_OUTpad
+# -- Compiling architecture LPM_SYN of LPM_OUTpad
+# -- Compiling entity LPM_BIpad
+# -- Compiling architecture LPM_SYN of LPM_BIpad
+# End time: 15:37:10 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/sgate
+# ** Error: (vlib-7) Failed to open  file "vhdl_libs/sgate/_info" in read/write mode.
+# Permission denied. (errno = EACCES)
+# ** Error: (vlib-7) Failed to open info file "vhdl_libs/sgate/_info" in write mode.
+# Permission denied. (errno = EACCES)
+# Errors: 2, Warnings: 0
+# Error in macro ./RECOP_run_msim_rtl_vhdl.do line 20
+# ** Error: (vlib-7) Failed to open  file "vhdl_libs/sgate/_info" in read/write mode.
+# Permission denied. (errno = EACCES)
+# ** Error: (vlib-7) Failed to open info file "vhdl_libs/sgate/_info" in write mode.
+# Permission denied. (errno = EACCES)
+# Errors: 2, Warnings: 0
+#     while executing
+# "error [FixExecError $msg]"
+#     (procedure "vlib" line 7)
+#     invoked from within
+# "vlib vhdl_libs/sgate"
+vlib work
+vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:38:37 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pc_test_vhd_vec_tst
+# -- Compiling architecture pc_test_arch of pc_test_vhd_vec_tst
+# End time: 15:38:37 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.pc_test_vhd_vec_tst
+# vsim work.pc_test_vhd_vec_tst 
+# Start time: 15:38:44 on May 09,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht(62): (vopt-3473) Component instance "i1 : pc_test" is not bound.
+#         Region: /pc_test_vhd_vec_tst
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pc_test_vhd_vec_tst(pc_test_arch)#1
+# ** Warning: (vsim-3473) Component instance "i1 : pc_test" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /pc_test_vhd_vec_tst File: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Root: /
+vsim -voptargs=+acc work.pc_test_vhd_vec_tst
+# End time: 15:38:51 on May 09,2024, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.pc_test_vhd_vec_tst 
+# Start time: 15:38:51 on May 09,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht(62): (vopt-3473) Component instance "i1 : pc_test" is not bound.
+#         Region: /pc_test_vhd_vec_tst
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pc_test_vhd_vec_tst(pc_test_arch)#1
+# ** Warning: (vsim-3473) Component instance "i1 : pc_test" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /pc_test_vhd_vec_tst File: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Root: /
+run 10ns
+add wave -position insertpoint  \
+sim:/pc_test_vhd_vec_tst/addr \
+sim:/pc_test_vhd_vec_tst/clk \
+sim:/pc_test_vhd_vec_tst/incrAddr \
+sim:/pc_test_vhd_vec_tst/instAddr \
+sim:/pc_test_vhd_vec_tst/reset \
+sim:/pc_test_vhd_vec_tst/write_pc
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# ** Warning: (vsim-3473) Component instance "i1 : pc_test" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /pc_test_vhd_vec_tst File: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+run 10 ns
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# ** Warning: (vsim-3473) Component instance "i1 : pc_test" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /pc_test_vhd_vec_tst File: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+run 1 us
+vsim work.pc_test_vhd_vec_tst
+# End time: 15:42:19 on May 09,2024, Elapsed time: 0:03:28
+# Errors: 0, Warnings: 2
+# vsim work.pc_test_vhd_vec_tst 
+# Start time: 15:42:20 on May 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pc_test_vhd_vec_tst(pc_test_arch)#1
+# ** Warning: (vsim-3473) Component instance "i1 : pc_test" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /pc_test_vhd_vec_tst File: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Root: /
+vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/test/pc_test.vhd
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:44:45 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/test/pc_test.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pc_test
+# -- Compiling architecture bdf_type of pc_test
+# End time: 15:44:45 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.pc_test_vhd_vec_tst
+# End time: 15:44:52 on May 09,2024, Elapsed time: 0:02:32
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.pc_test_vhd_vec_tst 
+# Start time: 15:44:52 on May 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pc_test_vhd_vec_tst(pc_test_arch)#1
+# ** Warning: (vsim-3473) Component instance "i1 : pc_test" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /pc_test_vhd_vec_tst File: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Root: /
+vcom -work work H:/Documents/701/ReCOP-Processor/test/pc_test.vhd
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:45:05 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/test/pc_test.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pc_test
+# -- Compiling architecture bdf_type of pc_test
+# End time: 15:45:06 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -work work H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:45:08 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity pc_test_vhd_vec_tst
+# -- Compiling architecture pc_test_arch of pc_test_vhd_vec_tst
+# End time: 15:45:08 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.pc_test_vhd_vec_tst
+# End time: 15:45:21 on May 09,2024, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.pc_test_vhd_vec_tst 
+# Start time: 15:45:21 on May 09,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.pc_test_vhd_vec_tst(pc_test_arch)#1
+# ** Warning: (vsim-3473) Component instance "i1 : pc_test" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /pc_test_vhd_vec_tst File: H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
+# ** Warning: (vsim-3479) Time unit 'ps' is less than the simulator resolution (1ns).
+#    Time: 0 ns  Iteration: 0  Root: /
+add wave -position insertpoint  \
+sim:/pc_test_vhd_vec_tst/addr \
+sim:/pc_test_vhd_vec_tst/clk \
+sim:/pc_test_vhd_vec_tst/incrAddr \
+sim:/pc_test_vhd_vec_tst/instAddr \
+sim:/pc_test_vhd_vec_tst/reset \
+sim:/pc_test_vhd_vec_tst/write_pc
+run 1 us
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:47:46 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd(6): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd(7): VHDL Compiler exiting
+# End time: 15:47:47 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:47:54 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd(8): VHDL Compiler exiting
+# End time: 15:47:55 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:16 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd(5): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd(6): VHDL Compiler exiting
+# End time: 15:48:16 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:16 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(8): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(8): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(9): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(9): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.various_constants.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(10): (vcom-1195) Cannot find expanded name "work.various_constants".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(10): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(13): VHDL Compiler exiting
+# End time: 15:48:17 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 9, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:17 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd 
+# -- Loading package STANDARD
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd(267): (vcom-1491) Empty source files.
+# End time: 15:48:17 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:17 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd(40): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd(41): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd(43): VHDL Compiler exiting
+# End time: 15:48:17 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:18 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd(8): VHDL Compiler exiting
+# End time: 15:48:18 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:18 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd(8): VHDL Compiler exiting
+# End time: 15:48:18 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:18 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd(10): VHDL Compiler exiting
+# End time: 15:48:19 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:19 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd(8): VHDL Compiler exiting
+# End time: 15:48:19 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:19 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd(8): VHDL Compiler exiting
+# End time: 15:48:19 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:19 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd(8): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd(8): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd(11): VHDL Compiler exiting
+# End time: 15:48:20 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:20 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(6): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(6): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.various_constants.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(7): (vcom-1195) Cannot find expanded name "work.various_constants".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(7): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(8): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(8): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(10): VHDL Compiler exiting
+# End time: 15:48:20 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 9, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:20 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd(8): VHDL Compiler exiting
+# End time: 15:48:20 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:21 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd(8): VHDL Compiler exiting
+# End time: 15:48:21 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:21 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd(5): Unknown expanded name.
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd(8): VHDL Compiler exiting
+# End time: 15:48:21 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:21 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd(5): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd(5): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd(7): VHDL Compiler exiting
+# End time: 15:48:22 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:22 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.recop_types.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd(6): (vcom-1195) Cannot find expanded name "work.recop_types".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd(7): VHDL Compiler exiting
+# End time: 15:48:22 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:22 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd(39): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd(40): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd(42): VHDL Compiler exiting
+# End time: 15:48:22 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:22 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd(40): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd(41): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd(43): VHDL Compiler exiting
+# End time: 15:48:23 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:23 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd(40): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd(41): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd(43): VHDL Compiler exiting
+# End time: 15:48:23 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:23 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package recop_types
+# End time: 15:48:23 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:24 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd(8): VHDL Compiler exiting
+# End time: 15:48:24 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:24 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd(8): VHDL Compiler exiting
+# End time: 15:48:24 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:24 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.various_constants.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd(9): (vcom-1195) Cannot find expanded name "work.various_constants".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd(9): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd(11): VHDL Compiler exiting
+# End time: 15:48:25 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:25 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd(41): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd(42): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd(44): VHDL Compiler exiting
+# End time: 15:48:25 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:25 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd(9): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd(9): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd(12): VHDL Compiler exiting
+# End time: 15:48:25 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:25 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package recop_types
+# -- Compiling package various_constants
+# End time: 15:48:26 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:28 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# -- Compiling entity address_reg
+# -- Compiling architecture behave of address_reg
+# End time: 15:48:28 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:28 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(9): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(9): Unknown expanded name.
+# -- Loading package various_constants
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/ALU.vhd(13): VHDL Compiler exiting
+# End time: 15:48:29 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:29 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd 
+# -- Loading package STANDARD
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd(267): (vcom-1491) Empty source files.
+# End time: 15:48:29 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:29 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd(40): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd(41): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd(43): VHDL Compiler exiting
+# End time: 15:48:29 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:29 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd(8): VHDL Compiler exiting
+# End time: 15:48:30 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:30 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/dprr.vhd(8): VHDL Compiler exiting
+# End time: 15:48:30 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:30 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instr_combine.vhd(10): VHDL Compiler exiting
+# End time: 15:48:30 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:31 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd(8): VHDL Compiler exiting
+# End time: 15:48:31 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:31 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/Max.vhd(8): VHDL Compiler exiting
+# End time: 15:48:31 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:31 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package recop_types
+# -- Compiling entity memory_arbiter
+# -- Compiling architecture behaviour of memory_arbiter
+# End time: 15:48:32 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:32 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# -- Loading package various_constants
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(8): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(8): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd(10): VHDL Compiler exiting
+# End time: 15:48:32 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:32 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd(8): VHDL Compiler exiting
+# End time: 15:48:32 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:32 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd(8): VHDL Compiler exiting
+# End time: 15:48:33 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:33 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# ** Error: (vcom-11) Could not find work.opcodes.
+# ** Error (suppressible): H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd(6): (vcom-1195) Cannot find expanded name "work.opcodes".
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd(6): Unknown expanded name.
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd(8): VHDL Compiler exiting
+# End time: 15:48:33 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:33 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package recop_types
+# -- Compiling package opcodes
+# End time: 15:48:33 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:34 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# -- Compiling entity PC
+# -- Compiling architecture a1 of PC
+# End time: 15:48:34 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:34 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd(39): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd(40): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/pll.vhd(42): VHDL Compiler exiting
+# End time: 15:48:34 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:34 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd(40): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd(41): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd(43): VHDL Compiler exiting
+# End time: 15:48:35 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:35 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd(40): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd(41): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd(43): VHDL Compiler exiting
+# End time: 15:48:35 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:35 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package recop_types
+# End time: 15:48:35 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:35 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# -- Loading package opcodes
+# -- Compiling entity reg_16
+# -- Compiling architecture behave of reg_16
+# End time: 15:48:36 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:36 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# -- Loading package opcodes
+# -- Compiling entity reg_32
+# -- Compiling architecture behave of reg_32
+# End time: 15:48:37 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:37 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package recop_types
+# -- Loading package various_constants
+# -- Compiling entity regfile
+# -- Compiling architecture beh of regfile
+# ** Warning: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/regfile.vhd(65): (vcom-1272) Length of expected is 16; length of actual is 15.
+# End time: 15:48:37 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:37 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd(41): (vcom-1598) Library "altera_mf" not found.
+# ** Error: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd(42): (vcom-1136) Unknown identifier "altera_mf".
+# ** Note: H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd(44): VHDL Compiler exiting
+# End time: 15:48:38 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:38 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/registers.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package recop_types
+# -- Loading package opcodes
+# -- Compiling entity registers
+# -- Compiling architecture beh of registers
+# End time: 15:48:38 on May 09,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd}
+# Model Technology ModelSim SE vcom 2020.2 Compiler 2020.04 Apr 19 2020
+# Start time: 15:48:38 on May 09,2024
+# vcom -reportprogress 300 -work work H:/Documents/701/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package recop_types
+# -- Compiling package various_constants
+# End time: 15:48:39 on May 09,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 15:49:21 on May 09,2024, Elapsed time: 0:04:00
+# Errors: 0, Warnings: 2

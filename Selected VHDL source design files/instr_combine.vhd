@@ -11,6 +11,7 @@ entity instr_combine is
 	port(
 		signal input_instr : in bit_16;
 		signal output_instr : out bit_32
+		signal output
 		);
 end instr_combine;
 
@@ -25,7 +26,7 @@ begin
 			temp_half <= input_instr;
 		else
 			get_next_inst <= '0';
-			output_instr <= input_instr & temp_half;
+			output_instr <= temp_half & input_instr;
 		end if;
 	
 	end process;

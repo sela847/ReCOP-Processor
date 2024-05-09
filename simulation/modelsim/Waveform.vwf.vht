@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/08/2024 14:33:02"
+-- Generated on "05/09/2024 17:40:48"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pc_test
 -- 
@@ -130,36 +130,75 @@ END PROCESS t_prcs_addr_5;
 t_prcs_addr_4: PROCESS
 BEGIN
 	addr(4) <= '0';
+	WAIT FOR 800000 ps;
+	addr(4) <= '1';
 WAIT;
 END PROCESS t_prcs_addr_4;
 -- addr[3]
 t_prcs_addr_3: PROCESS
 BEGIN
 	addr(3) <= '0';
+	WAIT FOR 400000 ps;
+	addr(3) <= '1';
+	WAIT FOR 400000 ps;
+	addr(3) <= '0';
 WAIT;
 END PROCESS t_prcs_addr_3;
 -- addr[2]
 t_prcs_addr_2: PROCESS
 BEGIN
+	FOR i IN 1 TO 2
+	LOOP
+		addr(2) <= '0';
+		WAIT FOR 200000 ps;
+		addr(2) <= '1';
+		WAIT FOR 200000 ps;
+	END LOOP;
 	addr(2) <= '0';
 WAIT;
 END PROCESS t_prcs_addr_2;
 -- addr[1]
 t_prcs_addr_1: PROCESS
 BEGIN
+LOOP
 	addr(1) <= '0';
-WAIT;
+	WAIT FOR 100000 ps;
+	addr(1) <= '1';
+	WAIT FOR 100000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_addr_1;
 -- addr[0]
 t_prcs_addr_0: PROCESS
 BEGIN
+LOOP
 	addr(0) <= '0';
-WAIT;
+	WAIT FOR 50000 ps;
+	addr(0) <= '1';
+	WAIT FOR 50000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_addr_0;
+
+-- clk
+t_prcs_clk: PROCESS
+BEGIN
+LOOP
+	clk <= '0';
+	WAIT FOR 10000 ps;
+	clk <= '1';
+	WAIT FOR 10000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_clk;
 
 -- reset
 t_prcs_reset: PROCESS
 BEGIN
+	reset <= '0';
+	WAIT FOR 460000 ps;
+	reset <= '1';
+	WAIT FOR 60000 ps;
 	reset <= '0';
 WAIT;
 END PROCESS t_prcs_reset;
@@ -167,24 +206,13 @@ END PROCESS t_prcs_reset;
 -- write_pc
 t_prcs_write_pc: PROCESS
 BEGIN
-LOOP
 	write_pc <= '0';
 	WAIT FOR 10000 ps;
 	write_pc <= '1';
-	WAIT FOR 10000 ps;
-	IF (NOW >= 20000 ps) THEN WAIT; END IF;
-END LOOP;
+	WAIT FOR 490000 ps;
+	write_pc <= '0';
+	WAIT FOR 70000 ps;
+	write_pc <= '1';
+WAIT;
 END PROCESS t_prcs_write_pc;
-
--- clk
-t_prcs_clk: PROCESS
-BEGIN
-LOOP
-	clk <= '0';
-	WAIT FOR 5000 ps;
-	clk <= '1';
-	WAIT FOR 5000 ps;
-	IF (NOW >= 20000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_clk;
 END pc_test_arch;

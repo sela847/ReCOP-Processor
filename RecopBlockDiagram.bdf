@@ -39,7 +39,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -912 624 -744 640)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "sip[15..0]" (rect 5 0 52 12)(font "Arial" ))
+	(text "sip[15..0]" (rect 5 0 51 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect -504 512 -328 528)
+	(rect -496 512 -320 528)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "sop[15..0]" (rect 90 0 136 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -1462,26 +1462,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -712 536)
-	(pt -792 536)
-)
-(connector
-	(pt -712 664)
-	(pt -864 664)
-)
-(connector
-	(pt -712 680)
-	(pt -864 680)
-)
-(connector
-	(pt -712 696)
-	(pt -864 696)
-)
-(connector
-	(pt -712 712)
-	(pt -864 712)
-)
-(connector
 	(pt -744 632)
 	(pt -712 632)
 	(bus)
@@ -1502,6 +1482,63 @@ refer to the applicable agreement for further details.
 	(pt -504 536)
 	(pt -448 536)
 	(bus)
+)
+(connector
+	(text "dpcr_lsb_sel" (rect -774 504 -714 521)(font "Intel Clear" ))
+	(pt -712 520)
+	(pt -792 520)
+)
+(connector
+	(text "dpcr_wr" (rect -790 520 -753 537)(font "Intel Clear" ))
+	(pt -712 536)
+	(pt -792 536)
+)
+(connector
+	(text "sop_wr" (rect -740 632 -706 649)(font "Intel Clear" ))
+	(pt -712 648)
+	(pt -752 648)
+)
+(connector
+	(text "reset" (rect -792 440 -769 457)(font "Intel Clear" ))
+	(pt -712 456)
+	(pt -800 456)
+)
+(connector
+	(text "pc_mux_sel[1..0]" (rect -824 56 -744 73)(font "Intel Clear" ))
+	(pt -704 72)
+	(pt -832 72)
+	(bus)
+)
+(connector
+	(text "rf_input_sel[2..0]" (rect 328 232 408 249)(font "Intel Clear" ))
+	(pt 424 248)
+	(pt 320 248)
+	(bus)
+)
+(connector
+	(pt -504 520)
+	(pt -496 520)
+	(bus)
+)
+(connector
+	(text "irq_wr" (rect -814 648 -785 665)(font "Intel Clear" ))
+	(pt -712 664)
+	(pt -864 664)
+)
+(connector
+	(text "irq_clr" (rect -831 664 -802 681)(font "Intel Clear" ))
+	(pt -712 680)
+	(pt -864 680)
+)
+(connector
+	(text "result_wen" (rect -786 680 -733 697)(font "Intel Clear" ))
+	(pt -712 696)
+	(pt -864 696)
+)
+(connector
+	(text "result" (rect -822 696 -795 713)(font "Intel Clear" ))
+	(pt -712 712)
+	(pt -864 712)
 )
 (text "ALU HAVE TO COMPLETE" (rect 1192 -32 1344 -13)(font "Intel Clear" (font_size 8)))
 (text "REGFILE HAVE TO COMPLETE" (rect 432 104 609 123)(font "Intel Clear" (font_size 8)))
