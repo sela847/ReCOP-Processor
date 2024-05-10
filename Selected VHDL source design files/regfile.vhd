@@ -33,7 +33,10 @@ entity regfile is
 		r7 : out bit_16;
 		dprr_res : in bit_1;
 		dprr_res_reg : in bit_1;
-		dprr_wren : in bit_1
+		dprr_wren : in bit_1;
+		op1: in bit_16;
+		op2: in bit_16
+		
 				
 		);
 end regfile;
@@ -58,12 +61,11 @@ begin
             when "011" =>
                 data_input_z <= aluout;
             when "100" =>
-                data_input_z <= rz_max;
+                data_input_z <= op1;
             when "101" =>
                 data_input_z <= sip_hold;
             when "110" =>
-                data_input_z <= X"000"&"000";
-					 --&er_temp;
+                data_input_z <= op2;
             when "111" =>
                 data_input_z <= dm_out;
             when others =>

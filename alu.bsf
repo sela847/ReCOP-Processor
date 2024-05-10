@@ -20,9 +20,9 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 248 224)
+	(rect 16 16 248 192)
 	(text "alu" (rect 5 0 15 12)(font "Arial" ))
-	(text "inst" (rect 8 192 20 204)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "alu_op1_sel[1..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "alu_op1_sel[1..0]" (rect 21 59 85 71)(font "Arial" ))
+		(text "operand_1[15..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "operand_1[15..0]" (rect 21 59 85 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "alu_op2_sel" (rect 0 0 47 12)(font "Arial" ))
-		(text "alu_op2_sel" (rect 21 75 68 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 1))
+		(text "operand_2[15..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "operand_2[15..0]" (rect 21 75 87 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
 		(pt 0 96)
@@ -61,37 +61,16 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "rx[15..0]" (rect 0 0 31 12)(font "Arial" ))
-		(text "rx[15..0]" (rect 21 107 52 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
+		(text "clr_z_flag" (rect 0 0 38 12)(font "Arial" ))
+		(text "clr_z_flag" (rect 21 107 59 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
 		(pt 0 128)
 		(input)
-		(text "rz[15..0]" (rect 0 0 30 12)(font "Arial" ))
-		(text "rz[15..0]" (rect 21 123 51 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "ir_operand[15..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "ir_operand[15..0]" (rect 21 139 87 151)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144)(line_width 3))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "clr_z_flag" (rect 0 0 38 12)(font "Arial" ))
-		(text "clr_z_flag" (rect 21 155 59 167)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 1))
-	)
-	(port
-		(pt 0 176)
-		(input)
 		(text "reset" (rect 0 0 20 12)(font "Arial" ))
-		(text "reset" (rect 21 171 41 183)(font "Arial" ))
-		(line (pt 0 176)(pt 16 176)(line_width 1))
+		(text "reset" (rect 21 123 41 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port
 		(pt 232 32)
@@ -108,6 +87,6 @@ refer to the applicable agreement for further details.
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 216 192)(line_width 1))
+		(rectangle (rect 16 16 216 160)(line_width 1))
 	)
 )

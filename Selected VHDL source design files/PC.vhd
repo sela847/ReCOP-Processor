@@ -39,7 +39,7 @@ begin
 	reg_out => instAddress
 	);
     -- Process triggered by the clock
-    process(clk)
+    process(clk, rst)
     begin
 		  if(rst = '1') then
 		      tempAddress<=(others=>'0');
