@@ -21,7 +21,7 @@ entity control_unit is
 			reset: out bit_1;
 			
 		--PC Mux
-			pc_mux_sel: out bit_2;
+			pc_mux_sel: out bit_1;
 			
 		--Instruction Reg
 			ir_wr: out bit_1;
@@ -168,7 +168,7 @@ architecture behavior of control_unit is
 						if(am="01" or "10") then
 							ir_operand_set<='1';
 						-- set pc_mux to output pc+1
-							pc_mux_sel <= "11";
+							pc_mux_sel <= "1";
 						end if;
 						
 						state<=T2;
@@ -188,50 +188,68 @@ architecture behavior of control_unit is
 				
 						--am_inherent
 							when "00" =>
-
+								op1_wr <= '0';
+								op2_wr <= '0';
 						--am_immediate
 							when "01" =>
-							
+								
 								if(OpCode = "000000") then ------ldr
 									alu_op1_sel<= "01"; --ir_operand
+									op1_wr <= '1';
 								
 								elsif(OpCode = "000010") then ------str
 									alu_op1_sel<= "01"; --ir_operand
 									alu_op2_sel<="10"; ---rz
+									op1_wr <= '1';
+									op2_wr <= '1';
 									
 								elsif(OpCode = "011000") then ------jmp
 									alu_op1_sel<= "01"; --ir_operand
+									op1_wr <= '1';
 															
 								elsif(OpCode = "001000") then -----and
 									alu_op1_sel<="00"; ---rx
 									alu_op2_sel<= "01"; --ir_operand
+									op1_wr <= '1';
+									op2_wr <= '1';
 									
 								elsif(OpCode = "001100") then -----or
 									alu_op1_sel<="00"; ---rx
 									alu_op2_sel<= "01"; --ir_operand
+									op1_wr <= '1';
+									op2_wr <= '1';
 								
 								elsif(OpCode = "111000") then -----add
 									alu_op1_sel<="00"; ---rx
 									alu_op2_sel<= "01"; --ir_operand
+									op1_wr <= '1';
+									op2_wr <= '1';
 
 								elsif(OpCode = "000100") then ------sub
 									alu_op1_sel<="01"; --ir_operand
 									alu_op2_sel<="10"; ---rz
-									
+									op1_wr <= '1';
+									op2_wr <= '1';
 								elsif(OpCode = "000011") then ------subv
 									alu_op1_sel<="01"; --ir_operand
 									alu_op2_sel<="00"; ---rx
-									
+									op1_wr <= '1';
+									op2_wr <= '1';
 								elsif(OpCode = "010100") then ------sz
 									alu_op1_sel<="01"; --ir_operand
+									op1_wr <= '1';
 									
 								elsif(OpCode = "101001") then ------datacall
 									alu_op1_sel<="00"; ---rx
 									alu_op2_sel<= "01"; --ir_operand
+									op1_wr <= '1';
+									op2_wr <= '1';
 									
 								elsif(OpCode = "011100") then ------present
 									alu_op1_sel<= "01"; --ir_operand
 									alu_op2_sel<="10"; ---rz
+									op1_wr <= '1';
+									op2_wr <= '1';
 									
 								end if;
 					
@@ -241,15 +259,22 @@ architecture behavior of control_unit is
 							
 								if(OpCode = "000000") then -----ldr
 									alu_op2_sel<= "01"; --ir_operand
+									op1_wr <= '1';
+
 									
 								elsif(OpCode = "000010") then ------str
 									alu_op1_sel<="00"; ---rx
 									alu_op2_sel<= "01"; --ir_operand
 									
+									op1_wr <= '1';
+									op2_wr <= '1';
+									
 								elsif(OpCode = "011101") then -----strpc
 									alu_op1_sel<="11"; ---pc
 									alu_op2_sel<="10"; ---rz
 								
+									op1_wr <= '1';
+									op2_wr <= '1';
 								
 								end if;
 
@@ -260,31 +285,54 @@ architecture behavior of control_unit is
 									alu_op1_sel<="10"; ---rz
 									alu_op2_sel<="00"; ---rx
 									
+									op1_wr <= '1';
+									op2_wr <= '1';
+									
 								elsif(OpCode = "001100") then ------or
 									alu_op1_sel<="00"; ---rx
 									alu_op2_sel<="10"; ---rz
+									
+									op1_wr <= '1';
+									op2_wr <= '1';
 									
 								elsif(OpCode = "111000") then -----add
 									alu_op1_sel<="00"; ---rx
 									alu_op2_sel<="10"; ---rz
 									
+									op1_wr <= '1';
+									op2_wr <= '1';
+									
 								elsif(OpCode = "000000") then -----ldr
 									alu_op2_sel<="00"; ---rx
+									
+									
+									op2_wr <= '1';
 									
 								elsif(OpCode = "000010") then -----str
 									alu_op1_sel<="00"; ---rx
 									alu_op2_sel<="10"; ---rz
+									
+									op1_wr <= '1';
+									op2_wr <= '1';
 								
 								elsif(OpCode = "011000") then -----jmp
 									alu_op1_sel<="00"; ---rx
+									
+									op1_wr <= '1';
+									
 								
 								elsif(OpCode = "101000") then -----datacall
 									alu_op1_sel<="10"; ---rz
 									alu_op2_sel<="00"; ---rx
 									
+									op1_wr <= '1';
+									op2_wr <= '1';
+									
 								elsif(OpCode = "111010") then -----SSOP
 									alu_op1_sel<="00"; ---rx
 									
+									op1_wr <= '1';
+						
 								end if;
 								
 							when others =>
@@ -312,7 +360,8 @@ architecture behavior of control_unit is
 		
 									
 								elsif(OpCode = "011000") then -- jmp
-									-- when jump, set PC to 
+									-- when jump, set PC to OP
+									pc_mux_sel <= '0'; 
 									
 								elsif(OpCode = "001000") then ----and
 									ld_r<= '1';
