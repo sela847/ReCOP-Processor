@@ -1,5 +1,5 @@
 Flow report for RECOP
-Thu May 09 17:41:37 2024
+Mon May 13 13:17:05 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu May 09 17:41:37 2024           ;
+; Flow Status                     ; Successful - Mon May 13 13:17:04 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; RECOP                                           ;
 ; Top-level Entity Name           ; pc_test                                         ;
@@ -48,8 +48,8 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 15                                              ;
-; Total pins                      ; 51                                              ;
+; Total registers                 ; 78                                              ;
+; Total pins                      ; 104                                             ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -67,28 +67,31 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/09/2024 15:20:47 ;
+; Start date & time ; 05/13/2024 13:12:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RECOP               ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224948461339869.171522484717720        ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; pc_test     ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; pc_test     ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; pc_test     ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; pc_test                                ; RECOP         ; --          ; --         ;
-+-------------------------------------+----------------------------------------+---------------+-------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 224948462349970.171556277103496        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim (VHDL)                        ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; pc_test     ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; pc_test     ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; pc_test     ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; pc_test                                ; RECOP         ; --          ; --             ;
++-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -96,21 +99,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4870 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4723 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:00                           ;
-; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4923 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4724 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4724 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4731 MB             ; 00:00:00                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -119,20 +112,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; EN441220         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; EN453002         ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; EN453002         ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; EN453002         ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; EN453002         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -140,18 +123,8 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off RECOP -c RECOP
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/test/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/qsim/Waveform.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/qsim/Waveform.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=H:/Documents/701/ReCOP-Processor/simulation/qsim/ RECOP -c RECOP
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=H:/Documents/701/ReCOP-Processor/simulation/qsim/ RECOP -c RECOP
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=H:/Documents/701/ReCOP-Processor/simulation/qsim/ RECOP -c RECOP
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/test/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/test/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/qsim/test/Waveform.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/test/Waveform.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/qsim/test/Waveform.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/Waveform1.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/modelsim/Waveform1.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RECOP -c RECOP --vector_source=H:/Documents/701/ReCOP-Processor/Waveform1.vwf --testbench_file=H:/Documents/701/ReCOP-Processor/simulation/qsim/Waveform1.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=H:/Documents/701/ReCOP-Processor/simulation/qsim/ RECOP -c RECOP
 
 

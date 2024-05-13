@@ -4,6 +4,126 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "write_pc",
+					"strict" : false
+				},
+				{
+					"name" : "AM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ir_wr",
+					"strict" : false
+				},
+				{
+					"name" : "ir_reset",
+					"strict" : false
+				},
+				{
+					"name" : "ir_operand_set",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[15]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[14]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[13]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[11]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instAddr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_pc",
+					"strict" : false
+				},
+				{
+					"name" : "pc_mux_sel",
+					"strict" : false
+				},
+				{
+					"name" : "OPCode[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OPCode[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OPCode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OPCode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OPCode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OPCode[0]",
+					"strict" : false
+				},
+				{
 					"name" : "incrAddr[14]",
 					"strict" : false
 				},
@@ -64,71 +184,235 @@
 					"strict" : false
 				},
 				{
+					"name" : "instruction[15]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[14]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[13]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[11]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[9]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[8]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Operand[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rx[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rz[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rz[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Rz[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Rz[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_in",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "op1reg[15]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[0]",
+					"name" : "op1reg[14]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[14]",
+					"name" : "op1reg[13]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[13]",
+					"name" : "op1reg[12]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[12]",
+					"name" : "op1reg[11]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[11]",
+					"name" : "op1reg[10]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[10]",
+					"name" : "op1reg[9]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[9]",
+					"name" : "op1reg[8]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[8]",
+					"name" : "op1reg[7]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[7]",
+					"name" : "op1reg[6]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[6]",
+					"name" : "op1reg[5]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[5]",
+					"name" : "op1reg[4]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[4]",
+					"name" : "op1reg[3]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[3]",
+					"name" : "op1reg[2]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[2]",
+					"name" : "op1reg[1]",
 					"strict" : false
 				},
 				{
-					"name" : "addr[1]",
+					"name" : "op1reg[0]",
 					"strict" : false
 				}
 			]

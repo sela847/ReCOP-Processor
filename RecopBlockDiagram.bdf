@@ -1575,10 +1575,6 @@ refer to the applicable agreement for further details.
 	(pt 320 616)
 )
 (connector
-	(pt -344 -24)
-	(pt -336 -24)
-)
-(connector
 	(pt -336 -24)
 	(pt -280 -24)
 )
@@ -1701,7 +1697,6 @@ refer to the applicable agreement for further details.
 	(pt 376 648)
 	(pt 312 648)
 )
-(junction (pt -336 -24))
 (junction (pt -736 632))
 (text "ALU HAVE TO COMPLETE" (rect 1192 -32 1344 -13)(font "Intel Clear" (font_size 8)))
 (text "REGFILE HAVE TO COMPLETE" (rect 432 104 609 123)(font "Intel Clear" (font_size 8)))
