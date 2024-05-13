@@ -61,7 +61,9 @@ entity control_unit is
 		--address_reg
 			AR_sel: out bit_1;
 			ar_rst: out bit_1;
-			ar_wr: out bit_1
+			ar_wr: out bit_1;
+			
+			currentSignal: out bit_3
 		
 		);
 
@@ -72,63 +74,28 @@ architecture behavior of control_unit is
 	signal state: state_trans := T0;
 	signal next_state: state_trans:= T0;
 	begin
-		process(clk) is
+	
+	
+		SwitchStates: process(clk) is
 		begin
+			if(rising_edge(clk)) then
+				if(rst = '1') then
+					State<=T0;
+				else
+					State<=next_state;
+				end if;	
+			end if;
+		end process SwitchStates;
 		
-		if(rising_edge(clk)) then
-			state <= next_state;
-			if(rst = '1') then
-				state<= T0;
-			--read from PC coutner and convert PC address into a instruction
-		
-					--PC
-						write_pc<='0';
-						reset<=	'1';
-						
-					--Instruction Reg
-						ir_wr<=	'0';
-						ir_reset<=	'1';
-						ir_operand_set<=	'0';
-						
-					--ALU
-						alu_op1_sel<= "00";
-						alu_op2_sel<= "00";
-						alu_op<= "000";
-						alu_carry<= '0';
-						clr_z_flag<= '1';
-						
-					--data mem
-						data_mem_wren<='0';
-						
-					--regfile
-						init<='1';
-						ld_r<='1';
-						dprr_res<='0';
-						dprr_res_reg<='0';
-						dprr_wren<='0';
-						
-					--registers
-						dpcr_lsb_sel<='0';
-						dpcr_wr<='0';
-						sop_wr<='0';
-						irq_wr<='0';
-						irq_clr<='1';
-						result_wren<='0';
-						result<='0';
-						
-					--address_reg
-						AR_sel<='0';
-						ar_rst<='1';
-						ar_wr<='0';
-
-			else
+		VariableChanging: process(state, am, Opcode) is
+		begin
 				case(state) is
 					when T0 =>
-					
 						next_state <= T1;
 						--PC
 						write_pc<='0';
 						reset<=	'1';
+						pc_mux_sel<='1';
 						
 					--Instruction Reg
 						ir_wr<=	'0';
@@ -145,6 +112,10 @@ architecture behavior of control_unit is
 					--data mem
 						data_mem_wren<='0';
 						
+						rf_input_sel<= "000";
+					--registers
+						op1_wr<= '0';
+						op2_wr<= '0';
 					--regfile
 						init<='1';
 						ld_r<='1';
@@ -165,11 +136,18 @@ architecture behavior of control_unit is
 						AR_sel<='0';
 						ar_rst<='1';
 						ar_wr<='0';
+						
 					when T1 =>
+						rf_input_sel<= "000";
+					--registers
+						op1_wr<= '0';
+						op2_wr<= '0';
+					
 					--read from PC coutner and convert PC address into a instruction
 					--PC
 						write_pc<='1';
 						reset<=	'0';
+						
 						
 					--Instruction Reg
 						ir_wr<=	'1';
@@ -209,27 +187,110 @@ architecture behavior of control_unit is
 						
 						next_state<= T1A;
 						
-						
+						pc_mux_sel<='1';
 					when T1A=>
-					
+
+						rf_input_sel<= "000";
+					--registers
+						op1_wr<= '0';
+						op2_wr<= '0';
+						--PC
+						pc_mux_sel<='1';
+						write_pc<='0';
+						reset<='0';
+						
+						--Instruction Reg
+						ir_wr <= '0';
+						ir_operand_set<='0';
+						ir_reset<='0';
+						
+						--ALU
+						alu_op1_sel<="00";
+						alu_op2_sel<="00";
+						alu_op<="000";
+						alu_carry<='0';
+						clr_z_flag<='0';
+						
+						--data mem
+						data_mem_wren<='0';
+						
+						--regfile
+						init<='0';
+						ld_r<='0';
+						dprr_res<='0';
+						dprr_res_reg<='0';
+						dprr_wren<='0';
+						
+						--registers
+						dpcr_lsb_sel<='0';
+						dpcr_wr<='0';
+						sop_wr<='0';
+						irq_wr<='0';
+						irq_clr<='0';
+						result_wren<='0';
+						result<='0';
+						
+						--address_reg
+						AR_sel<='0';
+						ar_rst<='0';
+						ar_wr<='0';
+						
 						if(am="01" or am="10") then
+							write_pc<='1';
 							ir_operand_set<='1';
 						-- set pc_mux to output pc+1
 							pc_mux_sel <= '1';
+							ir_wr <= '1';
 						end if;
 						
 						next_state<=T2;
 						
 					when T2 =>
+						rf_input_sel<= "000";
+					--registers
+						op1_wr<= '0';
+						op2_wr<= '0';
 					
-						--PC
+					--PC
+						pc_mux_sel<='1';
 						write_pc<='0';
+						reset<='0';
 						
-					--Instruction Reg
-						ir_wr<=	'0';
-						ir_reset<=	'0';
-						ir_operand_set<=	'0';
+						--Instruction Reg
+						ir_wr <= '0';
+						ir_operand_set<='0';
+						ir_reset<='0';
 						
+						--ALU
+						alu_op1_sel<="00";
+						alu_op2_sel<="00";
+						alu_op<="000";
+						alu_carry<='0';
+						clr_z_flag<='0';
+						
+						--data mem
+						data_mem_wren<='0';
+						
+						--regfile
+						init<='0';
+						ld_r<='0';
+						dprr_res<='0';
+						dprr_res_reg<='0';
+						dprr_wren<='0';
+						
+						--registers
+						dpcr_lsb_sel<='0';
+						dpcr_wr<='0';
+						sop_wr<='0';
+						irq_wr<='0';
+						irq_clr<='0';
+						result_wren<='0';
+						result<='0';
+						
+						--address_reg
+						AR_sel<='0';
+						ar_rst<='0';
+						ar_wr<='0';
 						
 						case(am) is
 				
@@ -388,6 +449,51 @@ architecture behavior of control_unit is
 						next_state<=T3;
 						
 					when T3 =>
+						rf_input_sel<= "000";
+					--registers
+						op1_wr<= '0';
+						op2_wr<= '0';
+						--PC
+						pc_mux_sel<='1';
+						write_pc<='0';
+						reset<='0';
+						
+						--Instruction Reg
+						ir_wr <= '0';
+						ir_operand_set<='0';
+						ir_reset<='0';
+						
+						--ALU
+						alu_op1_sel<="00";
+						alu_op2_sel<="00";
+						alu_op<="000";
+						alu_carry<='0';
+						clr_z_flag<='0';
+						
+						--data mem
+						data_mem_wren<='0';
+						
+						--regfile
+						init<='0';
+						ld_r<='0';
+						dprr_res<='0';
+						dprr_res_reg<='0';
+						dprr_wren<='0';
+						
+						--registers
+						dpcr_lsb_sel<='0';
+						dpcr_wr<='0';
+						sop_wr<='0';
+						irq_wr<='0';
+						irq_clr<='0';
+						result_wren<='0';
+						result<='0';
+						
+						--address_reg
+						AR_sel<='0';
+						ar_rst<='0';
+						ar_wr<='0';
+					
 						case(am) is
 				
 						--am_inherent
@@ -483,10 +589,9 @@ architecture behavior of control_unit is
 						next_state<=T1;
 					when others =>
 				end case;
-			end if;
-			end if;
-		end process;
-
+		end process VariableChanging;
+		
+		currentsignal<= "000" when state = T0 else "001" when state = T1 else "010" when state = T1A else "011" when state = T2 else "111";
 
 
 

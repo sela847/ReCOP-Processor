@@ -124,6 +124,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "currentState[2]",
+					"strict" : false
+				},
+				{
+					"name" : "currentState[1]",
+					"strict" : false
+				},
+				{
+					"name" : "currentState[0]",
+					"strict" : false
+				},
+				{
+					"name" : "incrAddr[15]",
+					"strict" : false
+				},
+				{
 					"name" : "incrAddr[14]",
 					"strict" : false
 				},
@@ -344,11 +360,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset_in",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "reset_in",
 					"strict" : false
 				},
 				{
