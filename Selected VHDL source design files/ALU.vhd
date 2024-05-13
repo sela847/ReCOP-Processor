@@ -72,6 +72,10 @@ begin
 				result <= operand_2 and operand_1;
 			when alu_or =>
 				result <= operand_2 or operand_1;
+				
+			when alu_checkZero =>
+				result <= operand_2;
+				
 			when others =>
 				result <= X"0000";
 		end case;
@@ -87,7 +91,7 @@ begin
 			if clr_z_flag = '1' then
 				z_flag <= '0';
 			-- if alu is working (operation is valid)
-			elsif alu_operation(2) = '0' then
+			elsif ((alu_operation(2) = '0') or (alu_operation = alu_checkZero)) then
 				if result = X"0000" then
 					z_flag <= '1';
 				else

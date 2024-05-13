@@ -540,15 +540,30 @@ architecture behavior of control_unit is
 									alu_op<=alu_sub;
 									rf_input_sel<= "011";  --- RZ = ALUOUT
 									
-								elsif(OpCode = "010100") then
-								
-								elsif(OpCode = "101000") then
+								elsif(OpCode = "011100") then -- Present
+									ld_r <= '0'; -- Don't load anything
+									alu_op <= alu_checkZero;
+									if (z_flag = '1') then
+										pc_mux_sel <= '0';
+									else
+										pc_mux_sel <= '1';
+									end if;
+									
+								elsif(OpCode = "101001") then -- Datacall immediate
+									-- DPCR <= OP1 & OP2
+									dpcr_lsb_sel<='1'; -- Becomes Rz & OPERAND
+									DPCR_wr <= '1';
+									-- DPRR(1) <= '0'
+									iqr_clr <= '1';
+									pc_mux_sel <= '1';
 
-								elsif(OpCode = "101001") then
-									
-									
-								elsif(OpCode = "011110") then
-									
+								elsif(OpCode = "101001") then -- SZ
+									if (z_flag = '1') then
+										pc_mux_sel <= '0';
+									else
+										pc_mux_sel <= '1';
+									end if;
+
 								end if;
 			--						constant ldr: bit_6 := "000000";
 			--						constant str: bit_6 := "000010";
@@ -565,6 +580,26 @@ architecture behavior of control_unit is
 
 						--am_direct	
 							when "10" =>
+							
+								if (OPcode = ldr) then
+									ld_r<= '1';
+									data_mem_wren <= '0';
+									rf_input_sel<= "111"; --- RZ = DM[OP2]
+									pc_mux_sel <= '1';
+								else if (Opcode = str) then
+									data_mem_wren <= '1';
+									-- DM[OP2] <= OP1
+									
+									pc_mux_sel <= '1';
+								else if (Opcode = strpc) then
+									
+									--DM[OP2] <= OP1
+									
+									data_mem_wren <= '1';
+									pc_mux_sel <= '1';
+									
+								
+								end if;
 			--						constant ldr: bit_6 := "000000";
 			--						constant str: bit_6 := "000010";
 			--						constant jmp: bit_6 := "011000";
@@ -580,6 +615,58 @@ architecture behavior of control_unit is
 
 						--am_register
 							when "11" =>
+							
+								if (opcode = andr) then -- AND
+									-- RZ <= ALU OP1 AND ALU OP2
+									alu_op <= alu_and;
+									rf_input_sel<= "011";
+									pc_mux_sel <= '1';
+								else if (opcode = orr) then -- OR
+								
+									pc_mux_sel <= '1';
+									alu_op <= alu_or;
+									rf_input_sel <= "011";
+									
+								else if (opcode = addr) then -- ADD
+								
+									pc_mux_sel <= '1';
+									alu_op <= alu_add;
+									rf_input_sel <= "011";
+									
+									
+								else if (opcode = Ldr) then -- loadr
+									ld_r<= '1';
+									data_mem_wren <= '0';
+									rf_input_sel<= "111"; --- RZ = DM[OP2]
+									pc_mux_sel <= '1';
+								else if (opcode = str) then -- store
+									data_mem_wren <= '1';
+									pc_mux_sel <= '1';
+									
+								else if (opcode = jmp) then -- jump Rx
+									
+									pc_mux_sel <= '0'; -- set to OP1
+									
+								else if (opcode = "101000") then -- Datacall
+									
+									-- DPCR <= OP1 & OP2
+									dpcr_lsb_sel<='0'; -- Becomes Rz & R7
+									DPCR_wr <= '1';
+									-- DPRR(1) <= '0'
+									iqr_clr <= '1';
+									pc_mux_sel <= '1';
+								
+								else if (opcode = LSIP) then
+									-- RZ <= SIP
+									ld_r <= '1';
+									rf_input_sel <= "101";
+									
+									
+								else if (opcode = SSOP) then
+									-- Set SOP to OP1
+									sop_wr <= '1';
+									pc_mux_sel <= '1';
+								end if;
 			--						constant sres: bit_6 := "101010";
 			--						constant datacall: bit_6 := "101000";
 			--						constant datacall2: bit_6 := "101001";

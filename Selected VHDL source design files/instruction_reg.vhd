@@ -70,6 +70,7 @@ begin
 			if (ir_write = '1') then
 				if (ir_operand_set = '1') then
 					v_Operand := ir_in(15 downto 0);
+					
 					t_operand <= v_operand;
 				else
 					v_AM := ir_in(15 downto 14);
