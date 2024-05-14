@@ -9,7 +9,7 @@ z2
 cModel Technology
 dH:/Documents/701/ReCOP-Processor/simulation/qsim
 Epc_test
-Z0 w1715574219
+Z0 w1715680026
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
@@ -24,13 +24,13 @@ Z11 8RECOP.vho
 Z12 FRECOP.vho
 l0
 L38
-VR0=Dfh?b[VI_GJNL:Bc9V0
-!s100 F1f?]YBWiH;b1niU96[S:2
+Vba:dE>@kglX;;h<W6kN8A1
+!s100 jg4izI5LXN8lzBaAF:OVR2
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1715574219
+Z14 !s110 1715680027
 !i10b 1
-Z15 !s108 1715574219.000000
+Z15 !s108 1715680027.000000
 Z16 !s90 -work|work|RECOP.vho|
 Z17 !s107 RECOP.vho|
 !i113 1
@@ -46,11 +46,11 @@ R6
 R7
 R8
 R9
-DEx4 work 7 pc_test 0 22 R0=Dfh?b[VI_GJNL:Bc9V0
-l486
-L61
-V<nn?FHh;1Q9e[LU`5<]i71
-!s100 zZPTfcggbO;AbFKB^c@S^3
+DEx4 work 7 pc_test 0 22 ba:dE>@kglX;;h<W6kN8A1
+l1813
+L64
+VU33zVl;04BBa4@4VFG@[_2
+!s100 SRScWzD?bHoWMf84z[88E2
 R13
 32
 R14
@@ -62,7 +62,7 @@ R17
 R18
 R19
 Epc_test_vhd_vec_tst
-Z20 w1715574218
+Z20 w1715680024
 R7
 R8
 R10
@@ -74,29 +74,29 @@ VFX[zziEYYBKR9>@RQaH@`0
 !s100 TO9@fhgBB?QC7kzfO4`7W0
 R13
 32
-Z23 !s110 1715574220
+Z23 !s110 1715680028
 !i10b 1
-Z24 !s108 1715574220.000000
-Z25 !s90 -work|work|Waveform2.vwf.vht|
-Z26 !s107 Waveform2.vwf.vht|
+R15
+Z24 !s90 -work|work|Waveform2.vwf.vht|
+Z25 !s107 Waveform2.vwf.vht|
 !i113 1
 R18
 R19
 Apc_test_arch
 R7
 R8
-Z27 DEx4 work 19 pc_test_vhd_vec_tst 0 22 FX[zziEYYBKR9>@RQaH@`0
-l76
+Z26 DEx4 work 19 pc_test_vhd_vec_tst 0 22 FX[zziEYYBKR9>@RQaH@`0
+l82
 L33
-Z28 VzG4SONK1FMH_KknlJfaz91
-Z29 !s100 P1QZjUdTYiSQDc7QB95Cf2
+Z27 V:PMA2_FSRon;OQc_KhIPB1
+Z28 !s100 C0Jc?7<Qc9RJla2@gj5:z0
 R13
 32
 R23
 !i10b 1
+R15
 R24
 R25
-R26
 !i113 1
 R18
 R19

@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/13/2024 16:23:18"
+-- Generated on "05/14/2024 21:46:45"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pc_test
 -- 
@@ -33,6 +33,7 @@ END pc_test_vhd_vec_tst;
 ARCHITECTURE pc_test_arch OF pc_test_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL alu_outputpin : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL AM : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
 SIGNAL currentState : STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -42,17 +43,20 @@ SIGNAL instruction : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL ir_operand_set : STD_LOGIC;
 SIGNAL ir_reset : STD_LOGIC;
 SIGNAL ir_wr : STD_LOGIC;
-SIGNAL op1reg : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL OPCode : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL Operand : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL pc_mux_sel : STD_LOGIC;
+SIGNAL r7_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL reset_in : STD_LOGIC;
 SIGNAL reset_pc : STD_LOGIC;
 SIGNAL Rx : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL rx_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL Rz : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL rz_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL write_pc : STD_LOGIC;
 COMPONENT pc_test
 	PORT (
+	alu_outputpin : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	AM : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	clk : IN STD_LOGIC;
 	currentState : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -62,14 +66,16 @@ COMPONENT pc_test
 	ir_operand_set : OUT STD_LOGIC;
 	ir_reset : OUT STD_LOGIC;
 	ir_wr : OUT STD_LOGIC;
-	op1reg : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 	OPCode : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	Operand : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	pc_mux_sel : OUT STD_LOGIC;
+	r7_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	reset_in : IN STD_LOGIC;
 	reset_pc : OUT STD_LOGIC;
 	Rx : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	rx_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	Rz : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	rz_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	write_pc : OUT STD_LOGIC
 	);
 END COMPONENT;
@@ -77,6 +83,7 @@ BEGIN
 	i1 : pc_test
 	PORT MAP (
 -- list connections between master ports and signals
+	alu_outputpin => alu_outputpin,
 	AM => AM,
 	clk => clk,
 	currentState => currentState,
@@ -86,14 +93,16 @@ BEGIN
 	ir_operand_set => ir_operand_set,
 	ir_reset => ir_reset,
 	ir_wr => ir_wr,
-	op1reg => op1reg,
 	OPCode => OPCode,
 	Operand => Operand,
 	pc_mux_sel => pc_mux_sel,
+	r7_outputData => r7_outputData,
 	reset_in => reset_in,
 	reset_pc => reset_pc,
 	Rx => Rx,
+	rx_outputData => rx_outputData,
 	Rz => Rz,
+	rz_outputData => rz_outputData,
 	write_pc => write_pc
 	);
 

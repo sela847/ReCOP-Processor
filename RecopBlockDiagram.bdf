@@ -470,7 +470,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1176 336 1424 480)
+	(rect 1184 344 1432 488)
 	(text "memory_model" (rect 5 0 81 12)(font "Arial" ))
 	(text "inst" (rect 8 128 25 140)(font "Arial" ))
 	(port
@@ -1162,11 +1162,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "clk" (rect 1136 352 1150 369)(font "Intel Clear" ))
-	(pt 1176 368)
-	(pt 1128 368)
-)
-(connector
 	(text "operand[15..0]" (rect 720 560 788 577)(font "Intel Clear" ))
 	(pt 768 576)
 	(pt 720 576)
@@ -1205,44 +1200,9 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "dm_addr[15..0]" (rect 1081 384 1152 401)(font "Intel Clear" ))
-	(pt 1176 400)
-	(pt 1032 400)
-	(bus)
-)
-(connector
-	(text "\"control uni\"" (rect 1048 400 1104 417)(font "Intel Clear" ))
-	(pt 1176 416)
-	(pt 1040 416)
-)
-(connector
-	(text "dm_out[15..0]" (rect 1080 416 1146 433)(font "Intel Clear" ))
-	(pt 1176 432)
-	(pt 1072 432)
-	(bus)
-)
-(connector
-	(text "dm_output_real[15..0]" (rect 1473 368 1579 385)(font "Intel Clear" ))
-	(pt 1424 384)
-	(pt 1568 384)
-	(bus)
-)
-(connector
 	(text "PCAddr[15..0]" (rect -40 56 26 73)(font "Intel Clear" ))
 	(pt 40 72)
 	(pt -136 72)
-	(bus)
-)
-(connector
-	(text "pm_out[15..0]" (rect 1096 368 1162 385)(font "Intel Clear" ))
-	(pt 1088 384)
-	(pt 1176 384)
-	(bus)
-)
-(connector
-	(text "pm_outdata[15..0]" (rect 1425 352 1512 369)(font "Intel Clear" ))
-	(pt 1424 368)
-	(pt 1544 368)
 	(bus)
 )
 (connector
@@ -1695,6 +1655,46 @@ refer to the applicable agreement for further details.
 	(text "pm_out[15..0]" (rect 336 -24 402 -7)(font "Intel Clear" ))
 	(pt 328 -8)
 	(pt 416 -8)
+	(bus)
+)
+(connector
+	(text "clk" (rect 1144 360 1158 377)(font "Intel Clear" ))
+	(pt 1184 376)
+	(pt 1136 376)
+)
+(connector
+	(text "dm_addr[15..0]" (rect 1089 392 1160 409)(font "Intel Clear" ))
+	(pt 1184 408)
+	(pt 1040 408)
+	(bus)
+)
+(connector
+	(text "\"control uni\"" (rect 1056 408 1112 425)(font "Intel Clear" ))
+	(pt 1184 424)
+	(pt 1048 424)
+)
+(connector
+	(text "dm_out[15..0]" (rect 1088 424 1154 441)(font "Intel Clear" ))
+	(pt 1184 440)
+	(pt 1080 440)
+	(bus)
+)
+(connector
+	(text "dm_output_real[15..0]" (rect 1481 376 1587 393)(font "Intel Clear" ))
+	(pt 1432 392)
+	(pt 1576 392)
+	(bus)
+)
+(connector
+	(text "pm_out[15..0]" (rect 1104 376 1170 393)(font "Intel Clear" ))
+	(pt 1096 392)
+	(pt 1184 392)
+	(bus)
+)
+(connector
+	(text "pm_outdata[15..0]" (rect 1433 360 1520 377)(font "Intel Clear" ))
+	(pt 1432 376)
+	(pt 1552 376)
 	(bus)
 )
 (junction (pt -736 632))

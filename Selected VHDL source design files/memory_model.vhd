@@ -25,7 +25,7 @@ entity memory_model is
 end memory_model;
 
 architecture beh of memory_model is
-	type memory_array is array (31 downto 0) of bit_16;
+	type memory_array is array (33 downto 0) of bit_16;
 	signal memory: memory_array:=(X"abcd",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",
 	--X"0002",
 	--am_immediate&present&X"d"&X"d",
@@ -73,7 +73,12 @@ architecture beh of memory_model is
 	X"000b",
 	am_immediate&andr&X"0"&X"0",
 	am_register&orr&X"2"&X"a",
-	am_register&addr&X"5"&X"2");
+	am_register&addr&X"5"&X"2",
+	X"0003",
+	am_immediate&addr&X"5"&X"5"
+	);
+	
+	
 
 begin
 	-- process (clk)
