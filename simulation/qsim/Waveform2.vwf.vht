@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/14/2024 21:47:04"
+-- Generated on "05/15/2024 14:42:19"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pc_test
 -- 
@@ -37,6 +37,7 @@ SIGNAL alu_outputpin : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL AM : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
 SIGNAL currentState : STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL dpcr : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL incrAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instruction : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -53,6 +54,8 @@ SIGNAL Rx : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL rx_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL Rz : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL rz_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL sip : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL sop_out : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL write_pc : STD_LOGIC;
 COMPONENT pc_test
 	PORT (
@@ -60,6 +63,7 @@ COMPONENT pc_test
 	AM : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	clk : IN STD_LOGIC;
 	currentState : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	dpcr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	incrAddr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instAddr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instruction : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -76,6 +80,8 @@ COMPONENT pc_test
 	rx_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	Rz : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	rz_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	sip : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	sop_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	write_pc : OUT STD_LOGIC
 	);
 END COMPONENT;
@@ -87,6 +93,7 @@ BEGIN
 	AM => AM,
 	clk => clk,
 	currentState => currentState,
+	dpcr => dpcr,
 	incrAddr => incrAddr,
 	instAddr => instAddr,
 	instruction => instruction,
@@ -103,6 +110,8 @@ BEGIN
 	rx_outputData => rx_outputData,
 	Rz => Rz,
 	rz_outputData => rz_outputData,
+	sip => sip,
+	sop_out => sop_out,
 	write_pc => write_pc
 	);
 
