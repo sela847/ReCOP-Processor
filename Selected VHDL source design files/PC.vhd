@@ -28,7 +28,7 @@ begin
         if (rst = '1') then
             tempAddress <= (others => '0');
 				--tempIncr <= (others => '0');
-				tempIncr <= std_logic_vector((unsigned(tempAddress(15 downto 0)) + 1));
+				tempIncr <= x"0001";
         elsif (rising_edge(clk)) then
             if (write_pc = '1') then
                 outputAddr:= inputAddress;

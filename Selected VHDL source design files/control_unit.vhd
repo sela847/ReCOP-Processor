@@ -83,7 +83,7 @@ begin
         end if;
     end process SwitchStates;
     
-    VariableChanging: process(state, am, Opcode) is
+    VariableChanging: process(state, am, Opcode, z_flag) is
 	 variable load_register: bit_1;
     begin
         case state is
@@ -112,7 +112,7 @@ begin
                 --regfile
                 rf_input_sel <= "000";
                 init <= '1';
-                ld_r <= '1';
+                ld_r <= '0';
                 dprr_res <= '0';
                 dprr_res_reg <= '0';
                 dprr_wren <= '0';
@@ -160,7 +160,7 @@ begin
                 data_mem_wren <= '0';
                 
                 --regfile
-                init <= '1';
+                init <= '0';
                 ld_r <= '0';
                 dprr_res <= '0';
                 dprr_res_reg <= '0';
@@ -390,8 +390,53 @@ begin
                         elsif Opcode = "111010" then -- SSOP
                             alu_op1_sel <= "00"; -- rx
                             op1_wr <= '1';
+								elsif Opcode = "110111" then
+									 next_state<=T3;
                         end if;
                     when others =>
+								   --PC
+									 write_pc <= '0';
+									 reset <= '1';
+									 pc_mux_sel <= '1';
+									 
+									 --Instruction Reg
+									 ir_wr <= '0';
+									 ir_reset <= '1';
+									 ir_operand_set <= '0';
+									 
+									 --ALU
+									 alu_op1_sel <= "00";
+									 alu_op2_sel <= "00";
+									 alu_op <= "000";
+									 alu_carry <= '0';
+									 clr_z_flag <= '1';
+									 
+									 --data mem
+									 data_mem_wren <= '0';
+									 
+									 --regfile
+									 rf_input_sel <= "000";
+									 init <= '0';
+									 ld_r <= '0';
+									 dprr_res <= '0';
+									 dprr_res_reg <= '0';
+									 dprr_wren <= '0';
+									 
+									 --registers
+									 op1_wr <= '0';
+									 op2_wr <= '0';
+									 dpcr_lsb_sel <= '0';
+									 dpcr_wr <= '0';
+									 sop_wr <= '0';
+									 irq_wr <= '0';
+									 irq_clr <= '1';
+									 result_wren <= '0';
+									 result <= '0';
+									 
+									 --address_reg
+									 AR_sel <= '0';
+									 ar_rst <= '1';
+									 ar_wr <= '0';
                 end case;
                 next_state <= T3;
                 
@@ -550,16 +595,60 @@ begin
                         elsif Opcode = "110111" then -- LSIP
                             -- RZ <= SIP
                            load_register:= '1';
-                            rf_input_sel <= "101";
+                           rf_input_sel <= "101";
                         elsif Opcode = "111010" then -- SSOP
                             -- Set SOP to OP1
                             sop_wr <= '1';
                             pc_mux_sel <= '1';
                         end if;
                     when others =>
+								   --PC
+									 write_pc <= '0';
+									 reset <= '1';
+									 pc_mux_sel <= '1';
+									 
+									 --Instruction Reg
+									 ir_wr <= '0';
+									 ir_reset <= '1';
+									 ir_operand_set <= '0';
+									 
+									 --ALU
+									 alu_op1_sel <= "00";
+									 alu_op2_sel <= "00";
+									 alu_op <= "000";
+									 alu_carry <= '0';
+									 clr_z_flag <= '1';
+									 
+									 --data mem
+									 data_mem_wren <= '0';
+									 
+									 --regfile
+									 rf_input_sel <= "000";
+									 init <= '0';
+									 ld_r <= '0';
+									 dprr_res <= '0';
+									 dprr_res_reg <= '0';
+									 dprr_wren <= '0';
+									 
+									 --registers
+									 op1_wr <= '0';
+									 op2_wr <= '0';
+									 dpcr_lsb_sel <= '0';
+									 dpcr_wr <= '0';
+									 sop_wr <= '0';
+									 irq_wr <= '0';
+									 irq_clr <= '1';
+									 result_wren <= '0';
+									 result <= '0';
+									 
+									 --address_reg
+									 AR_sel <= '0';
+									 ar_rst <= '1';
+									 ar_wr <= '0';
                 end case;
                 next_state <= T1;
             when others =>
+					 next_state<=T0;
         end case;
 		  ld_r<=load_register;
     end process VariableChanging;

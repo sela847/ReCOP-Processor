@@ -584,6 +584,70 @@
 					"strict" : false
 				},
 				{
+					"name" : "reg4_output[15]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[14]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[13]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[12]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[11]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[10]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[9]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[8]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg4_output[0]",
+					"strict" : false
+				},
+				{
 					"name" : "Rx[3]",
 					"strict" : false
 				},

@@ -35,7 +35,9 @@ entity regfile is
 		dprr_res_reg : in bit_1;
 		dprr_wren : in bit_1;
 		op1: in bit_16;
-		op2: in bit_16
+		op2: in bit_16;
+		
+		regFour: out bit_16
 		
 				
 		);
@@ -51,7 +53,7 @@ begin
 	-- mux selecting input data to be written to Rz
 	input_select: process (rf_input_sel, ir_operand, dm_out, aluout, rz_max, sip_hold, 
 	--er_temp,
-	dprr_res_reg)
+	dprr_res_reg, op1, op2)
     begin
         case rf_input_sel is
             when "000" =>
@@ -90,7 +92,7 @@ begin
 
 	rx <= regs(sel_x);
 	rz <= regs(sel_z);
-
+	regFour <= regs(4);
 
 	
 end beh;

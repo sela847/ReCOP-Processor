@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RECOP
-Wed May 15 14:41:53 2024
+Wed May 15 17:29:50 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,17 +16,19 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |pc_test|control_unit:inst1|state
  10. Logic Cells Representing Combinational Loops
- 11. General Register Statistics
- 12. Registers Packed Into Inferred Megafunctions
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for memory_model:inst|altsyncram:memory_rtl_0|altsyncram_2tr1:auto_generated
- 15. Source assignments for memory_model:inst|altsyncram:memory_rtl_1|altsyncram_2tr1:auto_generated
- 16. Parameter Settings for Inferred Entity Instance: memory_model:inst|altsyncram:memory_rtl_0
- 17. Parameter Settings for Inferred Entity Instance: memory_model:inst|altsyncram:memory_rtl_1
- 18. altsyncram Parameter Settings by Entity Instance
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for memory_model:inst|altsyncram:memory_rtl_0|altsyncram_2tr1:auto_generated
+ 17. Source assignments for memory_model:inst|altsyncram:memory_rtl_1|altsyncram_2tr1:auto_generated
+ 18. Parameter Settings for Inferred Entity Instance: memory_model:inst|altsyncram:memory_rtl_0
+ 19. Parameter Settings for Inferred Entity Instance: memory_model:inst|altsyncram:memory_rtl_1
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -52,14 +54,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 15 14:41:53 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed May 15 17:29:50 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; RECOP                                       ;
 ; Top-level Entity Name           ; pc_test                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 421                                         ;
-; Total pins                      ; 219                                         ;
+; Total registers                 ; 420                                         ;
+; Total pins                      ; 235                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,088                                       ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -216,27 +218,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 368       ;
+; Estimate of Logic utilization (ALMs needed) ; 361       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 448       ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 231       ;
-;     -- 5 input functions                    ; 83        ;
-;     -- 4 input functions                    ; 40        ;
-;     -- <=3 input functions                  ; 92        ;
+; Combinational ALUT usage for logic          ; 387       ;
+;     -- 7 input functions                    ; 10        ;
+;     -- 6 input functions                    ; 237       ;
+;     -- 5 input functions                    ; 75        ;
+;     -- 4 input functions                    ; 32        ;
+;     -- <=3 input functions                  ; 33        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 421       ;
+; Dedicated logic registers                   ; 420       ;
 ;                                             ;           ;
-; I/O pins                                    ; 219       ;
+; I/O pins                                    ; 235       ;
 ; Total MLAB memory bits                      ; 0         ;
 ; Total block memory bits                     ; 1088      ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 453       ;
-; Total fan-out                               ; 4704      ;
-; Average fan-out                             ; 3.51      ;
+; Maximum fan-out                             ; 452       ;
+; Total fan-out                               ; 4603      ;
+; Average fan-out                             ; 3.52      ;
 +---------------------------------------------+-----------+
 
 
@@ -245,11 +247,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
-; |pc_test                                  ; 448 (0)             ; 421 (0)                   ; 1088              ; 0          ; 219  ; 0            ; |pc_test                                                                          ; pc_test         ; work         ;
+; |pc_test                                  ; 387 (0)             ; 420 (0)                   ; 1088              ; 0          ; 235  ; 0            ; |pc_test                                                                          ; pc_test         ; work         ;
 ;    |MUX2_16:inst2|                        ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|MUX2_16:inst2                                                            ; MUX2_16         ; work         ;
-;    |PC:program_counter|                   ; 78 (78)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|PC:program_counter                                                       ; PC              ; work         ;
+;    |PC:program_counter|                   ; 15 (15)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|PC:program_counter                                                       ; PC              ; work         ;
 ;    |alu:inst3|                            ; 53 (53)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|alu:inst3                                                                ; alu             ; work         ;
-;    |control_unit:inst1|                   ; 46 (46)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|control_unit:inst1                                                       ; control_unit    ; work         ;
+;    |control_unit:inst1|                   ; 48 (48)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|control_unit:inst1                                                       ; control_unit    ; work         ;
 ;    |instruction_reg:instruction_r|        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|instruction_reg:instruction_r                                            ; instruction_reg ; work         ;
 ;    |memory_model:inst|                    ; 0 (0)               ; 0 (0)                     ; 1088              ; 0          ; 0    ; 0            ; |pc_test|memory_model:inst                                                        ; memory_model    ; work         ;
 ;       |altsyncram:memory_rtl_0|           ; 0 (0)               ; 0 (0)                     ; 544               ; 0          ; 0    ; 0            ; |pc_test|memory_model:inst|altsyncram:memory_rtl_0                                ; altsyncram      ; work         ;
@@ -299,19 +301,39 @@ Encoding Type:  One-Hot
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++---------------------------------------+--------------------------------------------+
+; Register name                         ; Reason for Removal                         ;
++---------------------------------------+--------------------------------------------+
+; PC:program_counter|tempAddress[0]     ; Merged with PC:program_counter|tempIncr[0] ;
+; Total Number of Removed Registers = 1 ;                                            ;
++---------------------------------------+--------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 421   ;
+; Total registers                              ; 420   ;
 ; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 352   ;
+; Number of registers using Asynchronous Clear ; 351   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 400   ;
+; Number of registers using Clock Enable       ; 399   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; PC:program_counter|tempIncr[0]         ; 19      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------+
@@ -514,34 +536,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 421                         ;
+; arriav_ff             ; 420                         ;
 ;     CLR               ; 16                          ;
 ;     ENA               ; 32                          ;
-;     ENA CLR           ; 320                         ;
+;     ENA CLR           ; 319                         ;
 ;     ENA CLR SLD       ; 16                          ;
 ;     ENA SCLR          ; 32                          ;
 ;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 450                         ;
-;     arith             ; 47                          ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 390                         ;
+;     arith             ; 32                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 14                          ;
 ;         5 data inputs ; 17                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 401                         ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 22                          ;
-;         3 data inputs ; 53                          ;
-;         4 data inputs ; 26                          ;
-;         5 data inputs ; 66                          ;
-;         6 data inputs ; 231                         ;
-; boundary_port         ; 219                         ;
+;     extend            ; 10                          ;
+;         7 data inputs ; 10                          ;
+;     normal            ; 348                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 18                          ;
+;         5 data inputs ; 58                          ;
+;         6 data inputs ; 237                         ;
+; boundary_port         ; 235                         ;
 ; stratixv_ram_block    ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.60                        ;
-; Average LUT depth     ; 3.21                        ;
+; Average LUT depth     ; 2.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -550,7 +570,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -560,7 +580,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 15 14:41:44 2024
+    Info: Processing started: Wed May 15 17:29:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RECOP -c RECOP
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -579,7 +599,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file selecte
     Info (12022): Found design unit 1: registerfile-SYN File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd Line: 60
     Info (12023): Found entity 1: registerfile File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd Line: 44
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/regfile.vhd
-    Info (12022): Found design unit 1: regfile-beh File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 44
+    Info (12022): Found design unit 1: regfile-beh File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 46
     Info (12023): Found entity 1: regfile File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 11
 Info (12021): Found 1 design units, including 0 entities, in source file selected vhdl source design files/recop_types.vhd
     Info (12022): Found design unit 1: recop_types File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd Line: 5
@@ -642,8 +662,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file selecte
     Info (12023): Found entity 1: dprr File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/dprr.vhd Line: 8
 Info (12127): Elaborating entity "pc_test" for the top level hierarchy
 Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:inst1"
-Warning (10492): VHDL Process Statement warning at control_unit.vhd(483): signal "z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 483
-Warning (10492): VHDL Process Statement warning at control_unit.vhd(496): signal "z_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 496
 Warning (10631): VHDL Process Statement warning at control_unit.vhd(86): inferring latch(es) for signal or variable "AR_sel", which holds its previous value in one or more paths through the process File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 86
 Warning (10631): VHDL Process Statement warning at control_unit.vhd(86): inferring latch(es) for signal or variable "ar_rst", which holds its previous value in one or more paths through the process File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 86
 Warning (10631): VHDL Process Statement warning at control_unit.vhd(86): inferring latch(es) for signal or variable "ar_wr", which holds its previous value in one or more paths through the process File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 86
@@ -651,19 +669,16 @@ Warning (10631): VHDL Process Statement warning at control_unit.vhd(86): inferri
 Info (10041): Inferred latch for "ar_wr" at control_unit.vhd(86) File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 86
 Info (10041): Inferred latch for "ar_rst" at control_unit.vhd(86) File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 86
 Info (10041): Inferred latch for "AR_sel" at control_unit.vhd(86) File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 86
-Info (10041): Inferred latch for "ld_r" at control_unit.vhd(520) File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 520
+Info (10041): Inferred latch for "ld_r" at control_unit.vhd(565) File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 565
 Info (12128): Elaborating entity "instruction_reg" for hierarchy "instruction_reg:instruction_r"
 Info (12128): Elaborating entity "memory_model" for hierarchy "memory_model:inst"
 Info (12128): Elaborating entity "reg_16" for hierarchy "reg_16:op2"
 Info (12128): Elaborating entity "MUX4_16" for hierarchy "MUX4_16:op2mux"
 Info (12128): Elaborating entity "regfile" for hierarchy "regfile:inst5"
-Warning (10492): VHDL Process Statement warning at regfile.vhd(64): signal "op1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 64
-Warning (10492): VHDL Process Statement warning at regfile.vhd(68): signal "op2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 68
 Info (12128): Elaborating entity "alu" for hierarchy "alu:inst3"
 Warning (10492): VHDL Process Statement warning at ALU.vhd(88): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 88
 Info (12128): Elaborating entity "MUX2_16" for hierarchy "MUX2_16:inst2"
 Info (12128): Elaborating entity "PC" for hierarchy "PC:program_counter"
-Warning (10492): VHDL Process Statement warning at PC.vhd(31): signal "tempAddress" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 31
 Info (12128): Elaborating entity "registers" for hierarchy "registers:inst9"
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "memory_model:inst|memory_rtl_0" 
@@ -720,35 +735,18 @@ Info (12133): Instantiated megafunction "memory_model:inst|altsyncram:memory_rtl
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2tr1.tdf
     Info (12023): Found entity 1: altsyncram_2tr1 File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/db/altsyncram_2tr1.tdf Line: 27
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "PC:program_counter|tempIncr[15]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[15]~_emulated" and latch "PC:program_counter|tempIncr[15]~1" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[14]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[14]~_emulated" and latch "PC:program_counter|tempIncr[14]~5" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[13]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[13]~_emulated" and latch "PC:program_counter|tempIncr[13]~9" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[12]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[12]~_emulated" and latch "PC:program_counter|tempIncr[12]~13" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[11]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[11]~_emulated" and latch "PC:program_counter|tempIncr[11]~17" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[10]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[10]~_emulated" and latch "PC:program_counter|tempIncr[10]~21" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[9]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[9]~_emulated" and latch "PC:program_counter|tempIncr[9]~25" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[8]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[8]~_emulated" and latch "PC:program_counter|tempIncr[8]~29" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[7]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[7]~_emulated" and latch "PC:program_counter|tempIncr[7]~33" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[6]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[6]~_emulated" and latch "PC:program_counter|tempIncr[6]~37" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[5]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[5]~_emulated" and latch "PC:program_counter|tempIncr[5]~41" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[4]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[4]~_emulated" and latch "PC:program_counter|tempIncr[4]~45" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[3]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[3]~_emulated" and latch "PC:program_counter|tempIncr[3]~49" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[2]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[2]~_emulated" and latch "PC:program_counter|tempIncr[2]~53" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[1]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[1]~_emulated" and latch "PC:program_counter|tempIncr[1]~57" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
-    Warning (13310): Register "PC:program_counter|tempIncr[0]" is converted into an equivalent circuit using register "PC:program_counter|tempIncr[0]~_emulated" and latch "PC:program_counter|tempIncr[0]~61" File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 28
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1067 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1022 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 201 output pins
-    Info (21061): Implemented 816 logic cells
+    Info (21059): Implemented 217 output pins
+    Info (21061): Implemented 755 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Wed May 15 14:41:53 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Wed May 15 17:29:50 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:06
 
 

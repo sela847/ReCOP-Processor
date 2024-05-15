@@ -66,7 +66,7 @@ architecture beh of memory_model is
 	am_inherent&ceot&X"0"&X"0",
 	am_inherent&seot&X"0"&X"0",
 	am_register&ler&X"3"&X"3",
-	X"0008",
+	X"0005",
 	am_immediate&ldr&X"e"&X"e",
 	X"400a",
 	am_immediate&subr&X"1"&X"8",
@@ -75,7 +75,7 @@ architecture beh of memory_model is
 	am_register&orr&X"2"&X"a",
 	am_register&addr&X"5"&X"2",
 	X"0003",
-	am_immediate&addr&X"5"&X"5"
+	am_immediate&addr&X"4"&X"4"
 	);
 	
 	

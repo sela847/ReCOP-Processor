@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/15/2024 14:42:04"
+-- Generated on "05/15/2024 17:30:56"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pc_test
 -- 
@@ -48,6 +48,7 @@ SIGNAL OPCode : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL Operand : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL pc_mux_sel : STD_LOGIC;
 SIGNAL r7_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL reg4_output : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL reset_in : STD_LOGIC;
 SIGNAL reset_pc : STD_LOGIC;
 SIGNAL Rx : STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -74,6 +75,7 @@ COMPONENT pc_test
 	Operand : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	pc_mux_sel : OUT STD_LOGIC;
 	r7_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	reg4_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	reset_in : IN STD_LOGIC;
 	reset_pc : OUT STD_LOGIC;
 	Rx : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -104,6 +106,7 @@ BEGIN
 	Operand => Operand,
 	pc_mux_sel => pc_mux_sel,
 	r7_outputData => r7_outputData,
+	reg4_output => reg4_output,
 	reset_in => reset_in,
 	reset_pc => reset_pc,
 	Rx => Rx,
@@ -123,7 +126,7 @@ LOOP
 	WAIT FOR 10000 ps;
 	clk <= '1';
 	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;
 
