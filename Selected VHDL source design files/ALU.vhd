@@ -29,6 +29,7 @@ end alu;
 
 architecture combined of alu is
 	signal result		: bit_16;
+	signal temp_val   : bit_16;
 begin
 	--MUX selecting first operand
 	--op1_select: process (alu_op1_sel, rx, rz, ir_operand)
@@ -61,7 +62,7 @@ begin
 	--end process op2_select;
 	
 	-- perform ALU operation
-	alu: process (alu_operation, operand_1, operand_2)
+	alu: process (alu_operation, operand_1, operand_2,temp_val)
 	begin
 		case alu_operation is
 			when alu_add =>
@@ -72,7 +73,9 @@ begin
 				result <= operand_2 and operand_1;
 			when alu_or =>
 				result <= operand_2 or operand_1;
-				
+			when alu_idle =>
+				result <= temp_val;
+			
 			when alu_checkZero =>
 				result <= operand_2;
 				
@@ -81,6 +84,7 @@ begin
 		end case;
 	end process alu;
 	alu_result <= result;
+	temp_val <= result;
 
 	-- zero flag
 	z1gen: process (clk)

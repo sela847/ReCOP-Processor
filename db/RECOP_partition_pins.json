@@ -28,7 +28,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "op2_wr",
+					"strict" : false
+				},
+				{
 					"name" : "reset_pc",
+					"strict" : false
+				},
+				{
+					"name" : "op1_wr",
 					"strict" : false
 				},
 				{
@@ -185,6 +193,10 @@
 				},
 				{
 					"name" : "OPCode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "load_reg",
 					"strict" : false
 				},
 				{
@@ -517,6 +529,134 @@
 				},
 				{
 					"name" : "instruction[0]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "op1OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "op2OUT[0]",
 					"strict" : false
 				},
 				{

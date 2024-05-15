@@ -25,7 +25,59 @@ entity memory_model is
 end memory_model;
 
 architecture beh of memory_model is
-	type memory_array is array (33 downto 0) of bit_16;
+--	type memory_array is array (33 downto 0) of bit_16;
+--	signal memory: memory_array:=(X"abcd",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",
+--	--X"0002",
+--	--am_immediate&present&X"d"&X"d",
+--	--X"0000",
+--	--am_immediate&andr&X"d"&X"d",
+--	--X"0002",
+--	--am_immediate&present&X"d"&X"d",
+--	--am_register&ldr&X"0"&X"9",
+--	--X"0006",
+--	--am_direct&str&X"c"&X"3",
+--	--am_register&ldr&X"0"&X"c",
+--	--am_register&str&X"c"&X"c",
+--	--am_register&ldr&X"0"&X"7",
+--	--X"aaaa",
+--	--am_immediate&str&X"7"&X"7",
+--	-- X"0002",
+--	-- am_immediate&sz&X"0"&X"0",
+--	-- am_inherent&clfz&X"0"&X"0",
+--	-- X"0000",
+--	-- am_immediate&andr&X"d"&X"d",
+--	-- X"0002",
+--	-- am_immediate&sz&X"b"&X"b",
+--	-- am_register&datacall&X"b"&X"b",
+--	-- X"1234",
+--	-- am_immediate&datacall&X"b"&X"b",	
+--	-- X"001f",
+--	-- am_direct&ldr&X"6"&X"7",
+--	X"0015",
+--	am_direct&ldr&X"0"&X"0",
+--	X"0015",
+--	am_direct&strpc&X"0"&X"0",
+--	X"0001",
+--	am_immediate&max&X"c"&X"c",
+--	am_register&ssop&X"4"&X"4",
+--	am_register&lsip&X"4"&X"4",
+--	am_register&ssvop&X"3"&X"3",
+--	am_inherent&cer&X"0"&X"0",
+--	am_inherent&ceot&X"0"&X"0",
+--	am_inherent&seot&X"0"&X"0",
+--	am_register&ler&X"3"&X"3",
+--	X"0005",
+--	am_immediate&ldr&X"e"&X"e",
+--	X"400a",
+--	am_immediate&subr&X"1"&X"8",
+--	X"000b",
+--	am_immediate&andr&X"0"&X"0",
+--	am_register&orr&X"2"&X"a",
+--	am_register&addr&X"5"&X"2",
+--	X"0003",
+--	am_immediate&addr&X"4"&X"4"
+--	);
+	type memory_array is array (31 downto 0) of bit_16;
 	signal memory: memory_array:=(X"abcd",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",X"0000",
 	--X"0002",
 	--am_immediate&present&X"d"&X"d",
@@ -50,7 +102,7 @@ architecture beh of memory_model is
 	-- am_immediate&sz&X"b"&X"b",
 	-- am_register&datacall&X"b"&X"b",
 	-- X"1234",
-	-- am_immediate&datacall&X"b"&X"b",	
+	-- am_immediate&datacall&X"b"&X"b",
 	-- X"001f",
 	-- am_direct&ldr&X"6"&X"7",
 	X"0015",
@@ -59,25 +111,31 @@ architecture beh of memory_model is
 	am_direct&strpc&X"0"&X"0",
 	X"0001",
 	am_immediate&max&X"c"&X"c",
-	am_register&ssop&X"4"&X"4",
+	--am_register&ssop&X"4"&X"4",
 	am_register&lsip&X"4"&X"4",
-	am_register&ssvop&X"3"&X"3",
-	am_inherent&cer&X"0"&X"0",
-	am_inherent&ceot&X"0"&X"0",
-	am_inherent&seot&X"0"&X"0",
+	--am_register&ssvop&X"3"&X"3",
+	--am_inherent&cer&X"0"&X"0",
+	--am_inherent&ceot&X"0"&X"0",
+	--am_inherent&seot&X"0"&X"0",
 	am_register&ler&X"3"&X"3",
-	X"0005",
+	X"0008",
 	am_immediate&ldr&X"e"&X"e",
-	X"400a",
+	X"400a",    -- (AM)01  -- (OP)000100  -- (RZ)0001  -- (RX)1000  -- (FUNC)400A
 	am_immediate&subr&X"1"&X"8",
-	X"000b",
-	am_immediate&andr&X"0"&X"0",
-	am_register&orr&X"2"&X"a",
-	am_register&addr&X"5"&X"2",
-	X"0003",
-	am_immediate&addr&X"4"&X"4"
+	--am_register&orr&X"2"&X"a",-- (AM)11  -- (OP)001100  -- (RZ)0010  -- (RX)1010  -- (FUNC)N/A
+	--am_register&addr&X"5"&X"2",    -- (AM)11  -- (OP)111000  -- (RZ)0101  -- (RX)0010  -- (FUNC)N/A
+	--X"000b",                    -- (AM)01  -- (OP)001000  -- (RZ)0000  -- (RX)0000  -- (FUNC)000B
+	--am_immediate&andr&X"0"&X"0"
+	am_register&addr&X"2"&X"2",
+	am_register&addr&X"2"&X"2",
+	X"0000",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
+	am_immediate&addr&X"2"&X"1",
+	am_register&ldr&X"1"&X"F",-- (AM)11  -- (OP)000000  -- (RZ)0001  -- (RX)1111  -- (FUNC)N/A
+	X"0002",                    -- (AM)01  -- (OP)000010  -- (RZ)1111  -- (RX)0000  -- (FUNC)ABCF
+	am_immediate&str&X"F"&X"0",
+	X"001F",-- (AM)01  -- (OP)000000  -- (RZ)1111  -- (RX)0000  -- (FUNC)001F
+	am_immediate&ldr&X"F"&X"0"
 	);
-	
 	
 
 begin
