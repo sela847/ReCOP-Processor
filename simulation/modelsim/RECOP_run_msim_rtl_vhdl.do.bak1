@@ -1,0 +1,21 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registers.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd}
+vcom -93 -work work {C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd}
+

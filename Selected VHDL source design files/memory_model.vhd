@@ -112,29 +112,35 @@ architecture beh of memory_model is
 	X"0001",
 	am_immediate&max&X"c"&X"c",
 	--am_register&ssop&X"4"&X"4",
-	am_register&lsip&X"4"&X"4",
 	--am_register&ssvop&X"3"&X"3",
 	--am_inherent&cer&X"0"&X"0",
 	--am_inherent&ceot&X"0"&X"0",
 	--am_inherent&seot&X"0"&X"0",
-	am_register&ler&X"3"&X"3",
 	X"0008",
 	am_immediate&ldr&X"e"&X"e",
-	X"400a",    -- (AM)01  -- (OP)000100  -- (RZ)0001  -- (RX)1000  -- (FUNC)400A
-	am_immediate&subr&X"1"&X"8",
 	--am_register&orr&X"2"&X"a",-- (AM)11  -- (OP)001100  -- (RZ)0010  -- (RX)1010  -- (FUNC)N/A
 	--am_register&addr&X"5"&X"2",    -- (AM)11  -- (OP)111000  -- (RZ)0101  -- (RX)0010  -- (FUNC)N/A
-	--X"000b",                    -- (AM)01  -- (OP)001000  -- (RZ)0000  -- (RX)0000  -- (FUNC)000B
-	--am_immediate&andr&X"0"&X"0"
-	am_register&addr&X"2"&X"2",
-	am_register&addr&X"2"&X"2",
-	X"0000",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
-	am_immediate&addr&X"2"&X"1",
-	am_register&ldr&X"1"&X"F",-- (AM)11  -- (OP)000000  -- (RZ)0001  -- (RX)1111  -- (FUNC)N/A
-	X"0002",                    -- (AM)01  -- (OP)000010  -- (RZ)1111  -- (RX)0000  -- (FUNC)ABCF
-	am_immediate&str&X"F"&X"0",
-	X"001F",-- (AM)01  -- (OP)000000  -- (RZ)1111  -- (RX)0000  -- (FUNC)001F
-	am_immediate&ldr&X"F"&X"0"
+--	X"0007",                    -- (AM)01  -- (OP)001000  -- (RZ)0000  -- (RX)0000  -- (FUNC)000B
+--	am_immediate&andr&X"0"&X"0",
+	--am_register&addr&X"2"&X"2",
+	--am_register&addr&X"2"&X"2",
+	X"0007",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
+	am_immediate&addr&X"0"&X"0",
+	-- (AM)11  -- (OP)000000  -- (RZ)0001  -- (RX)1111  -- (FUNC)N/A
+	X"0008",                    -- (AM)01  -- (OP)001000  -- (RZ)0000  -- (RX)0000  -- (FUNC)000B
+	am_immediate&orr&X"0"&X"0",
+	
+	
+	X"0001",
+	am_immediate&addr&X"0"&X"0",
+	am_register&str&X"0"&X"0",
+	am_register&addr&X"1"&X"0",
+                       -- (AM)01  -- (OP)000010  -- (RZ)1111  -- (RX)0000  -- (FUNC)ABCF
+	am_register&jmp&X"1"&X"1",
+	X"001E",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
+	am_immediate&addr&X"0"&X"0",
+	X"0003",    -- (AM)01  -- (OP)000100  -- (RZ)0001  -- (RX)1000  -- (FUNC)400A
+	am_immediate&addr&X"0"&X"0"
 	);
 	
 

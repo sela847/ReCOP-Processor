@@ -92,7 +92,7 @@ begin
 
 	rx <= regs(sel_x);
 	rz <= regs(sel_z);
-	regFour <= regs(4);
+	regFour <= regs(0);
 
 	
 end beh;

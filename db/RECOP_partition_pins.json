@@ -200,6 +200,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "alu_op_sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_op_sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_op_sel[0]",
+					"strict" : false
+				},
+				{
 					"name" : "alu_outputpin[15]",
 					"strict" : false
 				},
@@ -657,70 +669,6 @@
 				},
 				{
 					"name" : "op2OUT[0]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[15]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[14]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[13]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[12]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[11]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[10]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[9]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[8]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[7]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[6]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[5]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[4]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[3]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[2]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[1]",
-					"strict" : false
-				},
-				{
-					"name" : "prog_memOUT[0]",
 					"strict" : false
 				},
 				{

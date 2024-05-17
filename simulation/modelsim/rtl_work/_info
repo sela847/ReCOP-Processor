@@ -1,0 +1,598 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/simulation/modelsim
+Ealu
+Z1 w1715909746
+Z2 DPx4 work 17 various_constants 0 22 mVW4jPgC6nf=;g;KXGoeS1
+Z3 DPx4 work 7 opcodes 0 22 dWImD9M4G?J;VZh6]602N0
+Z4 DPx4 work 11 recop_types 0 22 ba]Oc6A1ih74@5EZ2CNC;3
+Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z6 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 8
+R0
+Z9 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd
+Z10 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd
+l0
+L13 1
+ViW^gj>eab6_26_CFdR_PQ2
+!s100 2YD7YAH^ENUn?>eDgPIVm2
+Z11 OV;C;2020.1;71
+31
+Z12 !s110 1715919273
+!i10b 1
+Z13 !s108 1715919273.000000
+Z14 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd|
+Z15 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd|
+!i113 1
+Z16 o-93 -work work
+Z17 tExplicit 1 CvgOpt 0
+Acombined
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 3 alu 0 22 iW^gj>eab6_26_CFdR_PQ2
+!i122 8
+l33
+L30 79
+V5k41i6:d[<`zIf9FSW96W2
+!s100 o4dV1Wo><XcmSXFigMZfn0
+R11
+31
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Econtrol_unit
+Z18 w1715918505
+R2
+R3
+R4
+Z19 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R7
+R8
+!i122 11
+R0
+Z20 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd
+Z21 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd
+l0
+L9 1
+V>3CjjOknLFIFHJc_<SCnX1
+!s100 4H7ON0?1hcc_?;KcWcS_l1
+R11
+31
+R12
+!i10b 1
+R13
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd|
+Z23 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd|
+!i113 1
+R16
+R17
+Abehavior
+R2
+R3
+R4
+R19
+R7
+R8
+DEx4 work 12 control_unit 0 22 >3CjjOknLFIFHJc_<SCnX1
+!i122 11
+l70
+L66 766
+Vgl`LO1N;9=W=8bMog7@QE3
+!s100 9zf1]K_d<fJIecI`n?^Od0
+R11
+31
+R12
+!i10b 1
+R13
+R22
+R23
+!i113 1
+R16
+R17
+Einstruction_reg
+Z24 w1715648916
+R3
+R4
+R19
+R7
+R8
+!i122 10
+R0
+Z25 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd
+Z26 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd
+l0
+L8 1
+VNfjJTb[MeJdMkH>bO;:bC0
+!s100 JQ^Zb_DW>nQEYmojR799;1
+R11
+31
+R12
+!i10b 1
+R13
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd|
+Z28 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd|
+!i113 1
+R16
+R17
+Abehave
+R3
+R4
+R19
+R7
+R8
+DEx4 work 15 instruction_reg 0 22 NfjJTb[MeJdMkH>bO;:bC0
+!i122 10
+l47
+L28 76
+V8g48=lH4U;PRY74jT2`@42
+!s100 FSn:m00[[47k08RcM02WL3
+R11
+31
+R12
+!i10b 1
+R13
+R27
+R28
+!i113 1
+R16
+R17
+Ememory_model
+Z29 w1715918140
+R3
+R2
+R4
+R19
+R7
+R8
+!i122 7
+R0
+Z30 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd
+Z31 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd
+l0
+L10 1
+V`>AFC8]B0gf2c;X^WF?7C3
+!s100 ]eKV44ABU;F@JXm]9k>IC3
+R11
+31
+R12
+!i10b 1
+R13
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd|
+Z33 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd|
+!i113 1
+R16
+R17
+Abeh
+R3
+R2
+R4
+R19
+R7
+R8
+DEx4 work 12 memory_model 0 22 `>AFC8]B0gf2c;X^WF?7C3
+!i122 7
+l141
+L27 145
+Vo3=1e=b6N]T1XVm<MhVDb1
+!s100 oi^YV5eUJ=zh?fUY6<18X1
+R11
+31
+R12
+!i10b 1
+R13
+R32
+R33
+!i113 1
+R16
+R17
+Emux2_16
+Z34 w1715165741
+R3
+R4
+R19
+R7
+R8
+!i122 12
+R0
+Z35 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd
+Z36 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd
+l0
+L8 1
+VELHVjD_jCVJ01Q^leNhdK0
+!s100 jeeRYS1eMfM?=C^c3j3jm2
+R11
+31
+Z37 !s110 1715919274
+!i10b 1
+R13
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd|
+Z39 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd|
+!i113 1
+R16
+R17
+Aarch
+R3
+R4
+R19
+R7
+R8
+DEx4 work 7 mux2_16 0 22 ELHVjD_jCVJ01Q^leNhdK0
+!i122 12
+l19
+L17 14
+VROA2l?4imcKDD<eaaN`j^3
+!s100 Ck39B4P?I9m^h^P1I[7<F3
+R11
+31
+R37
+!i10b 1
+R13
+R38
+R39
+!i113 1
+R16
+R17
+Emux4_16
+Z40 w1714960318
+R3
+R4
+R19
+R7
+R8
+!i122 4
+R0
+Z41 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd
+Z42 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd
+l0
+L8 1
+VR_OOS0OC87AQ`@e_IgA]l0
+!s100 ZL7zMKHfL3K;_:B07[:z21
+R11
+31
+R12
+!i10b 1
+R13
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd|
+Z44 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd|
+!i113 1
+R16
+R17
+Aarch
+R3
+R4
+R19
+R7
+R8
+DEx4 work 7 mux4_16 0 22 R_OOS0OC87AQ`@e_IgA]l0
+!i122 4
+l21
+L19 18
+VK]L:_djWm>5R63j@OV6@C2
+!s100 VzMZbWefbdN=M85MjzGm=3
+R11
+31
+R12
+!i10b 1
+R13
+R43
+R44
+!i113 1
+R16
+R17
+Popcodes
+R4
+R7
+R8
+!i122 2
+R40
+R0
+8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd
+FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd
+l0
+L7 1
+VdWImD9M4G?J;VZh6]602N0
+!s100 YH6S8C_M@a4iM?d77]?=_1
+R11
+31
+R12
+!i10b 1
+R13
+!s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd|
+!s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd|
+!i113 1
+R16
+R17
+Epc
+Z45 w1715743866
+R4
+R19
+R7
+R8
+!i122 3
+R0
+Z46 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd
+Z47 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd
+l0
+L7 1
+VR6N1kJMAUEHZBWY@>mI7S1
+!s100 ]K]3[SHJSYfO8jnbEkKBd0
+R11
+31
+R12
+!i10b 1
+R13
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd|
+Z49 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd|
+!i113 1
+R16
+R17
+Aa1
+R4
+R19
+R7
+R8
+DEx4 work 2 pc 0 22 R6N1kJMAUEHZBWY@>mI7S1
+!i122 3
+l22
+L18 29
+VB5YU1g`<TY=Sn2R50[a2e2
+!s100 cO?GJWoKK;ibXzV1z7BY]1
+R11
+31
+R12
+!i10b 1
+R13
+R48
+R49
+!i113 1
+R16
+R17
+Epc_test
+Z50 w1715248970
+R7
+R8
+!i122 13
+R0
+Z51 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/test/pc_test.vhd
+Z52 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/test/pc_test.vhd
+l0
+L24 1
+VBhFHkjJSJ=f0T3Ob9SAGM1
+!s100 glmhF5dzgKJD8@kR=aLn61
+R11
+32
+Z53 !s110 1715919322
+!i10b 1
+Z54 !s108 1715919322.000000
+Z55 !s90 -reportprogress|300|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/test/pc_test.vhd|
+!s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/test/pc_test.vhd|
+!i113 1
+Z56 o-work work
+R17
+Abdf_type
+R7
+R8
+DEx4 work 7 pc_test 0 22 BhFHkjJSJ=f0T3Ob9SAGM1
+!i122 13
+l50
+L36 28
+VA6iX]nY?Q^NohOLHci?1b1
+!s100 _cF;SEe[;n8e`6XfXH6oO0
+R11
+32
+R53
+!i10b 1
+R54
+R55
+Z57 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/test/pc_test.vhd|
+!i113 1
+R56
+R17
+Precop_types
+R7
+R8
+!i122 0
+w1715568236
+R0
+8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd
+FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd
+l0
+L5 1
+Vba]Oc6A1ih74@5EZ2CNC;3
+!s100 lLA<9nj>ZP=ii93F^o1AL1
+R11
+31
+R12
+!i10b 1
+!s108 1715919272.000000
+!s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd|
+!s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd|
+!i113 1
+R16
+R17
+Ereg_16
+R40
+R3
+R4
+R19
+R7
+R8
+!i122 9
+R0
+Z58 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd
+Z59 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd
+l0
+L8 1
+VQbHhY^Wjl8d108W:IaHMh1
+!s100 mcaGPoVWfhDj@:2A:bM4a0
+R11
+31
+R12
+!i10b 1
+R13
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd|
+Z61 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd|
+!i113 1
+R16
+R17
+Abehave
+R3
+R4
+R19
+R7
+R8
+DEx4 work 6 reg_16 0 22 QbHhY^Wjl8d108W:IaHMh1
+!i122 9
+l19
+L18 15
+V6mom<EoRaYM[35i1I9=;]1
+!s100 Bo=iU3OZog[6?d>?39E2Q3
+R11
+31
+R12
+!i10b 1
+R13
+R60
+R61
+!i113 1
+R16
+R17
+Eregfile
+Z62 w1715910723
+R2
+R4
+R19
+R7
+R8
+!i122 6
+R0
+Z63 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd
+Z64 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd
+l0
+L11 1
+VfR;<zYKW`0Nkz6Bn4Ud_k1
+!s100 L]555G=Go3NY6zkcl]5lZ0
+R11
+31
+R12
+!i10b 1
+R13
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd|
+Z66 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd|
+!i113 1
+R16
+R17
+Abeh
+R2
+R4
+R19
+R7
+R8
+DEx4 work 7 regfile 0 22 fR;<zYKW`0Nkz6Bn4Ud_k1
+!i122 6
+l50
+L46 53
+VXI?R=BXN7?cnN[^1V0XLj1
+!s100 8FdnOdUFK:9ocHhm72^U71
+R11
+31
+R12
+!i10b 1
+R13
+R65
+R66
+!i113 1
+R16
+R17
+Eregisters
+R1
+R3
+R4
+R5
+R6
+R7
+R8
+!i122 5
+R0
+Z67 8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registers.vhd
+Z68 FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registers.vhd
+l0
+L12 1
+V4=4BkiU_:F^3Ba:`ez2hK3
+!s100 U_S@d4NbWLhO0@b]8ok;M3
+R11
+31
+R12
+!i10b 1
+R13
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registers.vhd|
+Z70 !s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registers.vhd|
+!i113 1
+R16
+R17
+Abeh
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 9 registers 0 22 4=4BkiU_:F^3Ba:`ez2hK3
+!i122 5
+l50
+L48 116
+Vh5kTB7Dc:z=HX<Z9lcaIc0
+!s100 i;UgifJmbzN:UmznFQHgL1
+R11
+31
+R12
+!i10b 1
+R13
+R69
+R70
+!i113 1
+R16
+R17
+Pvarious_constants
+R4
+R7
+R8
+!i122 1
+R24
+R0
+8C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd
+FC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd
+l0
+L7 1
+VmVW4jPgC6nf=;g;KXGoeS1
+!s100 >DegmR[l4:Fd0fG_MEVRo1
+R11
+31
+R12
+!i10b 1
+R13
+!s90 -reportprogress|300|-93|-work|work|C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd|
+!s107 C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd|
+!i113 1
+R16
+R17

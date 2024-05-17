@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/15/2024 17:30:56"
+-- Generated on "05/17/2024 15:53:40"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pc_test
 -- 
@@ -33,6 +33,7 @@ END pc_test_vhd_vec_tst;
 ARCHITECTURE pc_test_arch OF pc_test_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL alu_op_sel : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL alu_outputpin : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL AM : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
@@ -44,6 +45,11 @@ SIGNAL instruction : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL ir_operand_set : STD_LOGIC;
 SIGNAL ir_reset : STD_LOGIC;
 SIGNAL ir_wr : STD_LOGIC;
+SIGNAL load_reg : STD_LOGIC;
+SIGNAL op1_wr : STD_LOGIC;
+SIGNAL op1OUT : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL op2_wr : STD_LOGIC;
+SIGNAL op2OUT : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL OPCode : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL Operand : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL pc_mux_sel : STD_LOGIC;
@@ -60,6 +66,7 @@ SIGNAL sop_out : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL write_pc : STD_LOGIC;
 COMPONENT pc_test
 	PORT (
+	alu_op_sel : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
 	alu_outputpin : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	AM : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	clk : IN STD_LOGIC;
@@ -71,6 +78,11 @@ COMPONENT pc_test
 	ir_operand_set : OUT STD_LOGIC;
 	ir_reset : OUT STD_LOGIC;
 	ir_wr : OUT STD_LOGIC;
+	load_reg : OUT STD_LOGIC;
+	op1_wr : OUT STD_LOGIC;
+	op1OUT : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	op2_wr : OUT STD_LOGIC;
+	op2OUT : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	OPCode : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	Operand : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	pc_mux_sel : OUT STD_LOGIC;
@@ -91,6 +103,7 @@ BEGIN
 	i1 : pc_test
 	PORT MAP (
 -- list connections between master ports and signals
+	alu_op_sel => alu_op_sel,
 	alu_outputpin => alu_outputpin,
 	AM => AM,
 	clk => clk,
@@ -102,6 +115,11 @@ BEGIN
 	ir_operand_set => ir_operand_set,
 	ir_reset => ir_reset,
 	ir_wr => ir_wr,
+	load_reg => load_reg,
+	op1_wr => op1_wr,
+	op1OUT => op1OUT,
+	op2_wr => op2_wr,
+	op2OUT => op2OUT,
 	OPCode => OPCode,
 	Operand => Operand,
 	pc_mux_sel => pc_mux_sel,
