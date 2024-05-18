@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/17/2024 20:25:15"
+-- Generated on "05/18/2024 17:21:34"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pc_test
 -- 
@@ -39,6 +39,7 @@ SIGNAL AM : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
 SIGNAL currentState : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL dpcr : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL dprr : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL incrAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instruction : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -64,6 +65,7 @@ SIGNAL rz_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL sip : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL sop_out : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL write_pc : STD_LOGIC;
+SIGNAL z_flag : STD_LOGIC;
 COMPONENT pc_test
 	PORT (
 	alu_op_sel : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -72,6 +74,7 @@ COMPONENT pc_test
 	clk : IN STD_LOGIC;
 	currentState : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
 	dpcr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	dprr : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	incrAddr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instAddr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instruction : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -96,7 +99,8 @@ COMPONENT pc_test
 	rz_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	sip : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 	sop_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	write_pc : OUT STD_LOGIC
+	write_pc : OUT STD_LOGIC;
+	z_flag : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -109,6 +113,7 @@ BEGIN
 	clk => clk,
 	currentState => currentState,
 	dpcr => dpcr,
+	dprr => dprr,
 	incrAddr => incrAddr,
 	instAddr => instAddr,
 	instruction => instruction,
@@ -133,7 +138,8 @@ BEGIN
 	rz_outputData => rz_outputData,
 	sip => sip,
 	sop_out => sop_out,
-	write_pc => write_pc
+	write_pc => write_pc,
+	z_flag => z_flag
 	);
 
 -- clk
@@ -156,4 +162,100 @@ BEGIN
 	reset_in <= '0';
 WAIT;
 END PROCESS t_prcs_reset_in;
+-- sip[15]
+t_prcs_sip_15: PROCESS
+BEGIN
+	sip(15) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_15;
+-- sip[14]
+t_prcs_sip_14: PROCESS
+BEGIN
+	sip(14) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_14;
+-- sip[13]
+t_prcs_sip_13: PROCESS
+BEGIN
+	sip(13) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_13;
+-- sip[12]
+t_prcs_sip_12: PROCESS
+BEGIN
+	sip(12) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_12;
+-- sip[11]
+t_prcs_sip_11: PROCESS
+BEGIN
+	sip(11) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_11;
+-- sip[10]
+t_prcs_sip_10: PROCESS
+BEGIN
+	sip(10) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_10;
+-- sip[9]
+t_prcs_sip_9: PROCESS
+BEGIN
+	sip(9) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_9;
+-- sip[8]
+t_prcs_sip_8: PROCESS
+BEGIN
+	sip(8) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_8;
+-- sip[7]
+t_prcs_sip_7: PROCESS
+BEGIN
+	sip(7) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_7;
+-- sip[6]
+t_prcs_sip_6: PROCESS
+BEGIN
+	sip(6) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_6;
+-- sip[5]
+t_prcs_sip_5: PROCESS
+BEGIN
+	sip(5) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_5;
+-- sip[4]
+t_prcs_sip_4: PROCESS
+BEGIN
+	sip(4) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_4;
+-- sip[3]
+t_prcs_sip_3: PROCESS
+BEGIN
+	sip(3) <= '1';
+WAIT;
+END PROCESS t_prcs_sip_3;
+-- sip[2]
+t_prcs_sip_2: PROCESS
+BEGIN
+	sip(2) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_2;
+-- sip[1]
+t_prcs_sip_1: PROCESS
+BEGIN
+	sip(1) <= '1';
+WAIT;
+END PROCESS t_prcs_sip_1;
+-- sip[0]
+t_prcs_sip_0: PROCESS
+BEGIN
+	sip(0) <= '0';
+WAIT;
+END PROCESS t_prcs_sip_0;
 END pc_test_arch;

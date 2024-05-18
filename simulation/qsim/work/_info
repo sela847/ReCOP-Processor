@@ -9,7 +9,7 @@ z2
 cModel Technology
 dH:/Documents/701/ReCOP-Processor/simulation/qsim
 Epc_test
-Z0 w1715994330
+Z0 w1716009696
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
@@ -19,7 +19,7 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
-Z10 dC:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/simulation/qsim
+Z10 dC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/simulation/qsim
 Z11 8RECOP.vho
 Z12 FRECOP.vho
 l0
@@ -28,9 +28,9 @@ VT6McIVNEBmC@T`mR]VLIE0
 !s100 3Z1ED?YPT18eQU7lgj;En3
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1715994331
+Z14 !s110 1716009697
 !i10b 1
-Z15 !s108 1715994331.000000
+Z15 !s108 1716009697.000000
 Z16 !s90 -work|work|RECOP.vho|
 Z17 !s107 RECOP.vho|
 !i113 1
@@ -49,8 +49,8 @@ R9
 DEx4 work 7 pc_test 0 22 T6McIVNEBmC@T`mR]VLIE0
 l1825
 L76
-V4M;2ozOzE<CjVXMNoXRl^3
-!s100 >XCWQGF?k<105ogkYK?^m3
+VVSTN52iV;k1II__LbAk5o0
+!s100 Yj]T2X0hjdGZo0iPg6Z1>2
 R13
 32
 R14
@@ -62,12 +62,12 @@ R17
 R18
 R19
 Epc_test_vhd_vec_tst
-Z20 w1715994329
+Z20 w1716009694
 R7
 R8
 R10
-Z21 8Waveform3.vwf.vht
-Z22 FWaveform3.vwf.vht
+Z21 8Waveform2.vwf.vht
+Z22 FWaveform2.vwf.vht
 l0
 L31
 VFX[zziEYYBKR9>@RQaH@`0
@@ -77,8 +77,8 @@ R13
 R14
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform3.vwf.vht|
-Z24 !s107 Waveform3.vwf.vht|
+Z23 !s90 -work|work|Waveform2.vwf.vht|
+Z24 !s107 Waveform2.vwf.vht|
 !i113 1
 R18
 R19
@@ -88,8 +88,8 @@ R8
 Z25 DEx4 work 19 pc_test_vhd_vec_tst 0 22 FX[zziEYYBKR9>@RQaH@`0
 l106
 L33
-Z26 VPU4EMYWlD3G3@BhEoCMgh1
-Z27 !s100 >a4@X9zC3_dZ=YDe1:?`O3
+Z26 Vhn9fbCc75lZUmj@69]0]R2
+Z27 !s100 VBZd?_I6VP_lQnlFhl;CD0
 R13
 32
 R14

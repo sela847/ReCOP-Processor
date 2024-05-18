@@ -126,21 +126,28 @@ architecture beh of memory_model is
 	--am_register&addr&X"2"&X"2",
 	X"0007",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
 	am_immediate&addr&X"0"&X"0",
-	-- (AM)11  -- (OP)000000  -- (RZ)0001  -- (RX)1111  -- (FUNC)N/A
-	X"0008",                    -- (AM)01  -- (OP)001000  -- (RZ)0000  -- (RX)0000  -- (FUNC)000B
-	am_immediate&orr&X"0"&X"0",
+--	-- (AM)11  -- (OP)000000  -- (RZ)0001  -- (RX)1111  -- (FUNC)N/A
+--	X"0008",                    -- (AM)01  -- (OP)001000  -- (RZ)0000  -- (RX)0000  -- (FUNC)000B
+--	am_immediate&orr&X"0"&X"0",
+--	
 	
 	
-	
-	am_register&str&X"0"&X"0",
-	am_register&addr&X"1"&X"0",
+	--am_register&str&X"0"&X"0",
+	--am_register&addr&X"1"&X"0",
    
-   am_register&addr&X"0"&X"0",
-	X"001E",
-	am_direct&ldr&X"0"&X"0",
-	X"001E",    -- (AM)01  -- (OP)000100  -- (RZ)0001  -- (RX)1000  -- (FUNC)400A                    -- (AM)01  -- (OP)000010  -- (RZ)1111  -- (RX)0000  -- (FUNC)ABCF
+--   am_register&addr&X"0"&X"0",
+--	X"001E",
+--	am_direct&ldr&X"0"&X"0",
+	X"0000",    -- (AM)01  -- (OP)000100  -- (RZ)0001  -- (RX)1000  -- (FUNC)400A                    -- (AM)01  -- (OP)000010  -- (RZ)1111  -- (RX)0000  -- (FUNC)ABCF
 	am_direct&strpc&X"0"&X"0",
-   X"001E",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
+	am_inherent&noop&X"0"&X"0",
+	X"0003",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
+   am_immediate&addr&X"0"&X"0",
+	am_register&lsip&X"0"&X"0",
+	am_register&SSOP&X"0"&X"0",
+	am_inherent&noop&X"0"&X"0",
+	am_inherent&noop&X"0"&X"0",
+   X"0005",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
    am_immediate&addr&X"0"&X"0"
     
     );
