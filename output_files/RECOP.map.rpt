@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RECOP
-Fri May 17 20:25:09 2024
+Sat May 18 13:05:24 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -54,14 +54,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 17 20:25:09 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sat May 18 13:05:24 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; RECOP                                       ;
 ; Top-level Entity Name           ; pc_test                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 420                                         ;
-; Total pins                      ; 273                                         ;
+; Total registers                 ; 422                                         ;
+; Total pins                      ; 276                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,024                                       ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -166,51 +166,53 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                          ;
-+---------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                        ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                      ; Library ;
-+---------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; Selected VHDL source design files/MUX4_16.vhd           ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd           ;         ;
-; Selected VHDL source design files/various_constants.vhd ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd ;         ;
-; Selected VHDL source design files/registers.vhd         ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registers.vhd         ;         ;
-; Selected VHDL source design files/regfile.vhd           ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd           ;         ;
-; Selected VHDL source design files/recop_types.vhd       ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd       ;         ;
-; Selected VHDL source design files/opcodes.vhd           ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd           ;         ;
-; Selected VHDL source design files/memory_model.vhd      ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd      ;         ;
-; Selected VHDL source design files/ALU.vhd               ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd               ;         ;
-; Selected VHDL source design files/PC.vhd                ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd                ;         ;
-; Selected VHDL source design files/reg_16.vhd            ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd            ;         ;
-; Selected VHDL source design files/instruction_reg.vhd   ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd   ;         ;
-; Selected VHDL source design files/control_unit.vhd      ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd      ;         ;
-; test/pc_test.bdf                                        ; yes             ; User Block Diagram/Schematic File                     ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/test/pc_test.bdf                                        ;         ;
-; Selected VHDL source design files/MUX2_16.vhd           ; yes             ; User VHDL File                                        ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd           ;         ;
-; altsyncram.tdf                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                             ;         ;
-; stratix_ram_block.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                      ;         ;
-; lpm_mux.inc                                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                ;         ;
-; lpm_decode.inc                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                             ;         ;
-; aglobal181.inc                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                             ;         ;
-; a_rdenreg.inc                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                              ;         ;
-; altrom.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                 ;         ;
-; altram.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                 ;         ;
-; altdpram.inc                                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                               ;         ;
-; db/altsyncram_ssr1.tdf                                  ; yes             ; Auto-Generated Megafunction                           ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/db/altsyncram_ssr1.tdf                                  ;         ;
-; db/RECOP.ram0_memory_model_59274251.hdl.mif             ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/db/RECOP.ram0_memory_model_59274251.hdl.mif             ;         ;
-+---------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                     ;
++---------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                        ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                 ; Library ;
++---------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; Selected VHDL source design files/MUX4_16.vhd           ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd           ;         ;
+; Selected VHDL source design files/various_constants.vhd ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd ;         ;
+; Selected VHDL source design files/registers.vhd         ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/registers.vhd         ;         ;
+; Selected VHDL source design files/regfile.vhd           ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/regfile.vhd           ;         ;
+; Selected VHDL source design files/recop_types.vhd       ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd       ;         ;
+; Selected VHDL source design files/opcodes.vhd           ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd           ;         ;
+; Selected VHDL source design files/memory_model.vhd      ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd      ;         ;
+; Selected VHDL source design files/ALU.vhd               ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/ALU.vhd               ;         ;
+; Selected VHDL source design files/PC.vhd                ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/PC.vhd                ;         ;
+; Selected VHDL source design files/reg_16.vhd            ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd            ;         ;
+; Selected VHDL source design files/instruction_reg.vhd   ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd   ;         ;
+; Selected VHDL source design files/control_unit.vhd      ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd      ;         ;
+; test/pc_test.bdf                                        ; yes             ; User Block Diagram/Schematic File                     ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/test/pc_test.bdf                                        ;         ;
+; Selected VHDL source design files/MUX2_16.vhd           ; yes             ; User VHDL File                                        ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd           ;         ;
+; altsyncram.tdf                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                        ;         ;
+; stratix_ram_block.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                 ;         ;
+; lpm_mux.inc                                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                           ;         ;
+; lpm_decode.inc                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                        ;         ;
+; aglobal181.inc                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                        ;         ;
+; a_rdenreg.inc                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                         ;         ;
+; altrom.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                            ;         ;
+; altram.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                            ;         ;
+; altdpram.inc                                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                          ;         ;
+; db/altsyncram_ssr1.tdf                                  ; yes             ; Auto-Generated Megafunction                           ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/db/altsyncram_ssr1.tdf                                  ;         ;
+; db/RECOP.ram0_memory_model_59274251.hdl.mif             ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/db/RECOP.ram0_memory_model_59274251.hdl.mif             ;         ;
++---------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -218,27 +220,27 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 393       ;
+; Estimate of Logic utilization (ALMs needed) ; 373       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 413       ;
-;     -- 7 input functions                    ; 1         ;
-;     -- 6 input functions                    ; 299       ;
-;     -- 5 input functions                    ; 49        ;
+; Combinational ALUT usage for logic          ; 388       ;
+;     -- 7 input functions                    ; 16        ;
+;     -- 6 input functions                    ; 263       ;
+;     -- 5 input functions                    ; 55        ;
 ;     -- 4 input functions                    ; 30        ;
-;     -- <=3 input functions                  ; 34        ;
+;     -- <=3 input functions                  ; 24        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 420       ;
+; Dedicated logic registers                   ; 422       ;
 ;                                             ;           ;
-; I/O pins                                    ; 273       ;
+; I/O pins                                    ; 276       ;
 ; Total MLAB memory bits                      ; 0         ;
 ; Total block memory bits                     ; 1024      ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 452       ;
-; Total fan-out                               ; 4822      ;
-; Average fan-out                             ; 3.42      ;
+; Maximum fan-out                             ; 454       ;
+; Total fan-out                               ; 4735      ;
+; Average fan-out                             ; 3.40      ;
 +---------------------------------------------+-----------+
 
 
@@ -247,11 +249,11 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
-; |pc_test                                  ; 413 (0)             ; 420 (0)                   ; 1024              ; 0          ; 273  ; 0            ; |pc_test                                                                          ; pc_test         ; work         ;
+; |pc_test                                  ; 388 (0)             ; 422 (0)                   ; 1024              ; 0          ; 276  ; 0            ; |pc_test                                                                          ; pc_test         ; work         ;
 ;    |MUX2_16:inst2|                        ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|MUX2_16:inst2                                                            ; MUX2_16         ; work         ;
 ;    |PC:program_counter|                   ; 15 (15)             ; 31 (31)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|PC:program_counter                                                       ; PC              ; work         ;
-;    |alu:inst3|                            ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|alu:inst3                                                                ; alu             ; work         ;
-;    |control_unit:inst1|                   ; 63 (63)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|control_unit:inst1                                                       ; control_unit    ; work         ;
+;    |alu:inst3|                            ; 40 (40)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|alu:inst3                                                                ; alu             ; work         ;
+;    |control_unit:inst1|                   ; 66 (66)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |pc_test|control_unit:inst1                                                       ; control_unit    ; work         ;
 ;    |instruction_reg:instruction_r|        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|instruction_reg:instruction_r                                            ; instruction_reg ; work         ;
 ;    |memory_model:inst|                    ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |pc_test|memory_model:inst                                                        ; memory_model    ; work         ;
 ;       |altsyncram:memory_rtl_0|           ; 0 (0)               ; 0 (0)                     ; 512               ; 0          ; 0    ; 0            ; |pc_test|memory_model:inst|altsyncram:memory_rtl_0                                ; altsyncram      ; work         ;
@@ -260,8 +262,8 @@ refer to the applicable agreement for further details.
 ;          |altsyncram_ssr1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 512               ; 0          ; 0    ; 0            ; |pc_test|memory_model:inst|altsyncram:memory_rtl_1|altsyncram_ssr1:auto_generated ; altsyncram_ssr1 ; work         ;
 ;    |reg_16:op1|                           ; 17 (17)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|reg_16:op1                                                               ; reg_16          ; work         ;
 ;    |reg_16:op2|                           ; 17 (17)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|reg_16:op2                                                               ; reg_16          ; work         ;
-;    |regfile:inst5|                        ; 214 (214)           ; 256 (256)                 ; 0                 ; 0          ; 0    ; 0            ; |pc_test|regfile:inst5                                                            ; regfile         ; work         ;
-;    |registers:inst9|                      ; 0 (0)               ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|registers:inst9                                                          ; registers       ; work         ;
+;    |regfile:inst5|                        ; 215 (215)           ; 256 (256)                 ; 0                 ; 0          ; 0    ; 0            ; |pc_test|regfile:inst5                                                            ; regfile         ; work         ;
+;    |registers:inst9|                      ; 1 (1)               ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |pc_test|registers:inst9                                                          ; registers       ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -316,14 +318,15 @@ Encoding Type:  One-Hot
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                 ;
-+---------------------------------------+--------------------------------------------+
-; Register name                         ; Reason for Removal                         ;
-+---------------------------------------+--------------------------------------------+
-; PC:program_counter|tempAddress[0]     ; Merged with PC:program_counter|tempIncr[0] ;
-; Total Number of Removed Registers = 1 ;                                            ;
-+---------------------------------------+--------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++---------------------------------------+---------------------------------------------+
+; Register name                         ; Reason for Removal                          ;
++---------------------------------------+---------------------------------------------+
+; registers:inst9|dprr[0]               ; Stuck at GND due to stuck port clock_enable ;
+; PC:program_counter|tempAddress[0]     ; Merged with PC:program_counter|tempIncr[0]  ;
+; Total Number of Removed Registers = 2 ;                                             ;
++---------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -331,10 +334,10 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 420   ;
+; Total registers                              ; 422   ;
 ; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 32    ;
-; Number of registers using Asynchronous Clear ; 351   ;
+; Number of registers using Asynchronous Clear ; 353   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 399   ;
 ; Number of registers using Preset             ; 0     ;
@@ -347,7 +350,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; PC:program_counter|tempIncr[0]         ; 19      ;
-; Total number of inverted registers = 1 ;         ;
+; registers:inst9|dprr[1]                ; 2       ;
+; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
@@ -366,12 +370,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |pc_test|reg_16:op1|reg_out[12] ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |pc_test|reg_16:op2|reg_out[3]  ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |pc_test|alu:inst3|Mux11        ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |pc_test|regfile:inst5|Mux7     ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |pc_test|reg_16:op1|reg_out[7]  ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |pc_test|reg_16:op2|reg_out[12] ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |pc_test|alu:inst3|Mux8         ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |pc_test|regfile:inst5|Mux9     ;
 ; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |pc_test|regfile:inst5|Mux21    ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |pc_test|regfile:inst5|Mux43    ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |pc_test|regfile:inst5|Mux46    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -551,32 +555,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 420                         ;
-;     CLR               ; 16                          ;
+; arriav_ff             ; 422                         ;
+;     CLR               ; 18                          ;
 ;     ENA               ; 32                          ;
 ;     ENA CLR           ; 303                         ;
 ;     ENA CLR SLD       ; 32                          ;
 ;     ENA SCLR          ; 32                          ;
 ;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 419                         ;
+; arriav_lcell_comb     ; 395                         ;
 ;     arith             ; 32                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 14                          ;
 ;         5 data inputs ; 17                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 386                         ;
+;     extend            ; 16                          ;
+;         7 data inputs ; 16                          ;
+;     normal            ; 347                         ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 24                          ;
-;         3 data inputs ; 8                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 11                          ;
 ;         4 data inputs ; 16                          ;
-;         5 data inputs ; 32                          ;
-;         6 data inputs ; 299                         ;
-; boundary_port         ; 273                         ;
+;         5 data inputs ; 38                          ;
+;         6 data inputs ; 263                         ;
+; boundary_port         ; 276                         ;
 ; stratixv_ram_block    ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.60                        ;
-; Average LUT depth     ; 2.86                        ;
+; Average LUT depth     ; 2.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -585,7 +590,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -595,95 +600,95 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 17 20:25:00 2024
+    Info: Processing started: Sat May 18 13:05:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RECOP -c RECOP
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/dpcr.vhd
-    Info (12022): Found design unit 1: dpcr-behavior File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd Line: 18
-    Info (12023): Found entity 1: dpcr File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd Line: 8
+    Info (12022): Found design unit 1: dpcr-behavior File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd Line: 18
+    Info (12023): Found entity 1: dpcr File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/dpcr.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/mux4_16.vhd
-    Info (12022): Found design unit 1: MUX4_16-arch File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd Line: 19
-    Info (12023): Found entity 1: MUX4_16 File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd Line: 8
+    Info (12022): Found design unit 1: MUX4_16-arch File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd Line: 19
+    Info (12023): Found entity 1: MUX4_16 File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/MUX4_16.vhd Line: 8
 Info (12021): Found 1 design units, including 0 entities, in source file selected vhdl source design files/various_constants.vhd
-    Info (12022): Found design unit 1: various_constants File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd Line: 7
+    Info (12022): Found design unit 1: various_constants File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/various_constants.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/registers.vhd
-    Info (12022): Found design unit 1: registers-beh File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registers.vhd Line: 48
-    Info (12023): Found entity 1: registers File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registers.vhd Line: 12
+    Info (12022): Found design unit 1: registers-beh File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/registers.vhd Line: 48
+    Info (12023): Found entity 1: registers File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/registers.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/registerfile.vhd
-    Info (12022): Found design unit 1: registerfile-SYN File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd Line: 60
-    Info (12023): Found entity 1: registerfile File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd Line: 44
+    Info (12022): Found design unit 1: registerfile-SYN File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd Line: 60
+    Info (12023): Found entity 1: registerfile File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/registerfile.vhd Line: 44
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/regfile.vhd
-    Info (12022): Found design unit 1: regfile-beh File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 46
-    Info (12023): Found entity 1: regfile File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 11
+    Info (12022): Found design unit 1: regfile-beh File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 46
+    Info (12023): Found entity 1: regfile File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/regfile.vhd Line: 11
 Info (12021): Found 1 design units, including 0 entities, in source file selected vhdl source design files/recop_types.vhd
-    Info (12022): Found design unit 1: recop_types File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd Line: 5
+    Info (12022): Found design unit 1: recop_types File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/recop_types.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/recop_pll.vhd
-    Info (12022): Found design unit 1: recop_pll-SYN File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd Line: 52
-    Info (12023): Found entity 1: recop_pll File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd Line: 43
+    Info (12022): Found design unit 1: recop_pll-SYN File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd Line: 52
+    Info (12023): Found entity 1: recop_pll File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/recop_pll.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/prog_mem.vhd
-    Info (12022): Found design unit 1: prog_mem-SYN File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd Line: 53
-    Info (12023): Found entity 1: prog_mem File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd Line: 43
+    Info (12022): Found design unit 1: prog_mem-SYN File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd Line: 53
+    Info (12023): Found entity 1: prog_mem File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/prog_mem.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/pll.vhd
-    Info (12022): Found design unit 1: pll-SYN File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/pll.vhd Line: 52
-    Info (12023): Found entity 1: pll File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/pll.vhd Line: 42
+    Info (12022): Found design unit 1: pll-SYN File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/pll.vhd Line: 52
+    Info (12023): Found entity 1: pll File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/pll.vhd Line: 42
 Info (12021): Found 1 design units, including 0 entities, in source file selected vhdl source design files/opcodes.vhd
-    Info (12022): Found design unit 1: opcodes File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd Line: 7
+    Info (12022): Found design unit 1: opcodes File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/opcodes.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/memory_model.vhd
-    Info (12022): Found design unit 1: memory_model-beh File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd Line: 27
-    Info (12023): Found entity 1: memory_model File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd Line: 10
+    Info (12022): Found design unit 1: memory_model-beh File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd Line: 27
+    Info (12023): Found entity 1: memory_model File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/memory_model.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/memory_arbiter.vhd
-    Info (12022): Found design unit 1: memory_arbiter-behaviour File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd Line: 35
-    Info (12023): Found entity 1: memory_arbiter File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd Line: 11
+    Info (12022): Found design unit 1: memory_arbiter-behaviour File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd Line: 35
+    Info (12023): Found entity 1: memory_arbiter File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/memory_arbiter.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/data_mem.vhd
-    Info (12022): Found design unit 1: data_mem-SYN File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd Line: 55
-    Info (12023): Found entity 1: data_mem File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd Line: 43
+    Info (12022): Found design unit 1: data_mem-SYN File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd Line: 55
+    Info (12023): Found entity 1: data_mem File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/data_mem.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/alu.vhd
-    Info (12022): Found design unit 1: alu-combined File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 30
-    Info (12023): Found entity 1: alu File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 13
+    Info (12022): Found design unit 1: alu-combined File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 30
+    Info (12023): Found entity 1: alu File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file recopblockdiagram.bdf
     Info (12023): Found entity 1: RecopBlockDiagram
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/pc.vhd
-    Info (12022): Found design unit 1: PC-a1 File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 18
-    Info (12023): Found entity 1: PC File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 7
+    Info (12022): Found design unit 1: PC-a1 File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 18
+    Info (12023): Found entity 1: PC File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/PC.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/reg_16.vhd
-    Info (12022): Found design unit 1: reg_16-behave File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd Line: 18
-    Info (12023): Found entity 1: reg_16 File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd Line: 8
+    Info (12022): Found design unit 1: reg_16-behave File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd Line: 18
+    Info (12023): Found entity 1: reg_16 File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/reg_16.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/instruction_reg.vhd
-    Info (12022): Found design unit 1: instruction_reg-behave File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd Line: 28
-    Info (12023): Found entity 1: instruction_reg File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd Line: 8
+    Info (12022): Found design unit 1: instruction_reg-behave File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd Line: 28
+    Info (12023): Found entity 1: instruction_reg File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/instruction_reg.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/reg_32.vhd
-    Info (12022): Found design unit 1: reg_32-behave File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd Line: 18
-    Info (12023): Found entity 1: reg_32 File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd Line: 8
+    Info (12022): Found design unit 1: reg_32-behave File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd Line: 18
+    Info (12023): Found entity 1: reg_32 File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/reg_32.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/control_unit.vhd
-    Info (12022): Found design unit 1: control_unit-behavior File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 67
-    Info (12023): Found entity 1: control_unit File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 9
+    Info (12022): Found design unit 1: control_unit-behavior File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 67
+    Info (12023): Found entity 1: control_unit File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/control_unit.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/max.vhd
-    Info (12022): Found design unit 1: Max-behavior File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/Max.vhd Line: 18
-    Info (12023): Found entity 1: Max File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/Max.vhd Line: 8
+    Info (12022): Found design unit 1: Max-behavior File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/Max.vhd Line: 18
+    Info (12023): Found entity 1: Max File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/Max.vhd Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file test/pc_test.bdf
     Info (12023): Found entity 1: pc_test
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/address_reg.vhd
-    Info (12022): Found design unit 1: address_reg-behave File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd Line: 20
-    Info (12023): Found entity 1: address_reg File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd Line: 6
+    Info (12022): Found design unit 1: address_reg-behave File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd Line: 20
+    Info (12023): Found entity 1: address_reg File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/address_reg.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/mux2_16.vhd
-    Info (12022): Found design unit 1: MUX2_16-arch File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd Line: 17
-    Info (12023): Found entity 1: MUX2_16 File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd Line: 8
+    Info (12022): Found design unit 1: MUX2_16-arch File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd Line: 17
+    Info (12023): Found entity 1: MUX2_16 File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/MUX2_16.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/mux3_16.vhd
-    Info (12022): Found design unit 1: MUX3_16-arch File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd Line: 18
-    Info (12023): Found entity 1: MUX3_16 File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd Line: 8
+    Info (12022): Found design unit 1: MUX3_16-arch File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd Line: 18
+    Info (12023): Found entity 1: MUX3_16 File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/MUX3_16.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file selected vhdl source design files/dprr.vhd
-    Info (12022): Found design unit 1: dprr-behavior File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/dprr.vhd Line: 18
-    Info (12023): Found entity 1: dprr File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/dprr.vhd Line: 8
+    Info (12022): Found design unit 1: dprr-behavior File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/dprr.vhd Line: 18
+    Info (12023): Found entity 1: dprr File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/dprr.vhd Line: 8
 Info (12127): Elaborating entity "pc_test" for the top level hierarchy
 Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:inst1"
-Info (12128): Elaborating entity "instruction_reg" for hierarchy "instruction_reg:instruction_r"
-Info (12128): Elaborating entity "memory_model" for hierarchy "memory_model:inst"
-Info (12128): Elaborating entity "reg_16" for hierarchy "reg_16:op2"
-Info (12128): Elaborating entity "MUX4_16" for hierarchy "MUX4_16:op2mux"
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:inst5"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:inst3"
-Warning (10492): VHDL Process Statement warning at ALU.vhd(92): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at ALU.vhd(92): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/Selected VHDL source design files/ALU.vhd Line: 92
+Info (12128): Elaborating entity "reg_16" for hierarchy "reg_16:op1"
+Info (12128): Elaborating entity "MUX4_16" for hierarchy "MUX4_16:op1mux"
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:inst5"
+Info (12128): Elaborating entity "memory_model" for hierarchy "memory_model:inst"
+Info (12128): Elaborating entity "instruction_reg" for hierarchy "instruction_reg:instruction_r"
 Info (12128): Elaborating entity "MUX2_16" for hierarchy "MUX2_16:inst2"
 Info (12128): Elaborating entity "PC" for hierarchy "PC:program_counter"
 Info (12128): Elaborating entity "registers" for hierarchy "registers:inst9"
@@ -741,19 +746,21 @@ Info (12133): Instantiated megafunction "memory_model:inst|altsyncram:memory_rtl
     Info (12134): Parameter "INIT_FILE" = "db/RECOP.ram0_memory_model_59274251.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ssr1.tdf
-    Info (12023): Found entity 1: altsyncram_ssr1 File: C:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/db/altsyncram_ssr1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_ssr1 File: C:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/db/altsyncram_ssr1.tdf Line: 27
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dprr[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1086 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1064 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 255 output pins
-    Info (21061): Implemented 781 logic cells
+    Info (21059): Implemented 258 output pins
+    Info (21061): Implemented 756 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4870 megabytes
-    Info: Processing ended: Fri May 17 20:25:09 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Sat May 18 13:05:24 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 

@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/17/2024 13:47:37"
+-- Generated on "05/18/2024 12:34:43"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pc_test
 -- 
@@ -33,11 +33,13 @@ END pc_test_vhd_vec_tst;
 ARCHITECTURE pc_test_arch OF pc_test_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL alu_op_sel : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL alu_outputpin : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL AM : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
 SIGNAL currentState : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL dpcr : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL dprr : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL incrAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL instruction : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -63,13 +65,16 @@ SIGNAL rz_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL sip : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL sop_out : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL write_pc : STD_LOGIC;
+SIGNAL z_flag : STD_LOGIC;
 COMPONENT pc_test
 	PORT (
+	alu_op_sel : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
 	alu_outputpin : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	AM : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	clk : IN STD_LOGIC;
 	currentState : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
 	dpcr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	dprr : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	incrAddr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instAddr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	instruction : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -94,18 +99,21 @@ COMPONENT pc_test
 	rz_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	sip : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 	sop_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	write_pc : OUT STD_LOGIC
+	write_pc : OUT STD_LOGIC;
+	z_flag : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
 	i1 : pc_test
 	PORT MAP (
 -- list connections between master ports and signals
+	alu_op_sel => alu_op_sel,
 	alu_outputpin => alu_outputpin,
 	AM => AM,
 	clk => clk,
 	currentState => currentState,
 	dpcr => dpcr,
+	dprr => dprr,
 	incrAddr => incrAddr,
 	instAddr => instAddr,
 	instruction => instruction,
@@ -130,7 +138,8 @@ BEGIN
 	rz_outputData => rz_outputData,
 	sip => sip,
 	sop_out => sop_out,
-	write_pc => write_pc
+	write_pc => write_pc,
+	z_flag => z_flag
 	);
 -- sip[15]
 t_prcs_sip_15: PROCESS

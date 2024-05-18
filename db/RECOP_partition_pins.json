@@ -8,27 +8,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "AM[1]",
-					"strict" : false
-				},
-				{
-					"name" : "AM[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ir_wr",
-					"strict" : false
-				},
-				{
-					"name" : "ir_reset",
-					"strict" : false
-				},
-				{
-					"name" : "ir_operand_set",
-					"strict" : false
-				},
-				{
-					"name" : "op2_wr",
+					"name" : "z_flag",
 					"strict" : false
 				},
 				{
@@ -37,6 +17,10 @@
 				},
 				{
 					"name" : "op1_wr",
+					"strict" : false
+				},
+				{
+					"name" : "op2_wr",
 					"strict" : false
 				},
 				{
@@ -101,6 +85,18 @@
 				},
 				{
 					"name" : "Operand[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ir_wr",
+					"strict" : false
+				},
+				{
+					"name" : "ir_reset",
+					"strict" : false
+				},
+				{
+					"name" : "ir_operand_set",
 					"strict" : false
 				},
 				{
@@ -169,6 +165,14 @@
 				},
 				{
 					"name" : "instAddr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AM[0]",
 					"strict" : false
 				},
 				{
@@ -413,6 +417,10 @@
 				},
 				{
 					"name" : "dpcr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dprr[1]",
 					"strict" : false
 				},
 				{
@@ -1024,11 +1032,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset_in",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "reset_in",
 					"strict" : false
 				},
 				{

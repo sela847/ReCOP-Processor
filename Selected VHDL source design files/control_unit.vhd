@@ -322,6 +322,7 @@ begin
                             alu_op2_sel <= "10"; -- rz
                             op1_wr <= '1';
                             op2_wr <= '1';
+									 alu_op <= alu_checkZero;
                         end if;
                     --am_direct
                     when "10" =>
@@ -394,7 +395,7 @@ begin
 									 alu_op2_sel <= "00";
 									 alu_op <= "100";
 									 alu_carry <= '0';
-									 clr_z_flag <= '1';
+									 clr_z_flag <= '0';
 									 
 									 --data mem
 									 data_mem_wren <= '0';
@@ -503,7 +504,7 @@ begin
                             rf_input_sel <= "011"; -- RZ = ALUOUT
                         elsif Opcode = "011100" then -- present
                             ld_r <= '0'; -- Don't load anything
-                            alu_op <= alu_checkZero;
+                            write_pc <= '1';
                             if z_flag = '1' then
                                 pc_mux_sel <= '0';
                             else
@@ -517,6 +518,7 @@ begin
                             irq_clr <= '1';
                             pc_mux_sel <= '1';
                         elsif Opcode = "010100" then -- SZ
+									 write_pc <= '1';
                             if z_flag = '1' then
                                 pc_mux_sel <= '0';
                             else
@@ -600,7 +602,7 @@ begin
 									 alu_op2_sel <= "00";
 									 alu_op <= "100";
 									 alu_carry <= '0';
-									 clr_z_flag <= '1';
+									 clr_z_flag <= '0';
 									 
 									 --data mem
 									 data_mem_wren <= '0';
