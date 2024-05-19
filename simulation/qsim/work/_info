@@ -9,7 +9,7 @@ z2
 cModel Technology
 dH:/Documents/701/ReCOP-Processor/simulation/qsim
 Epc_test
-Z0 w1716009696
+Z0 w1716086439
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
@@ -19,18 +19,18 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
-Z10 dC:/COMPSYS701/ASSIGNMENTS/ReCOP-Processor/simulation/qsim
+Z10 dC:/Users/shaar/Downloads/ASSIGNMENT1/ReCOP-Processor/simulation/qsim
 Z11 8RECOP.vho
 Z12 FRECOP.vho
 l0
 L38
-VT6McIVNEBmC@T`mR]VLIE0
-!s100 3Z1ED?YPT18eQU7lgj;En3
+VRZ6R1eJfmZ;HT;8gn5]Z<2
+!s100 b:E4LRFeKK3E00omcg:Fb0
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1716009697
+Z14 !s110 1716086440
 !i10b 1
-Z15 !s108 1716009697.000000
+Z15 !s108 1716086440.000000
 Z16 !s90 -work|work|RECOP.vho|
 Z17 !s107 RECOP.vho|
 !i113 1
@@ -46,11 +46,11 @@ R6
 R7
 R8
 R9
-DEx4 work 7 pc_test 0 22 T6McIVNEBmC@T`mR]VLIE0
-l1825
-L76
-VVSTN52iV;k1II__LbAk5o0
-!s100 Yj]T2X0hjdGZo0iPg6Z1>2
+DEx4 work 7 pc_test 0 22 RZ6R1eJfmZ;HT;8gn5]Z<2
+l2420
+L78
+V3j]RG5TDYSLhAV73h0T]L1
+!s100 S[hNIleXb1l5i@z>ikm^83
 R13
 32
 R14
@@ -62,41 +62,41 @@ R17
 R18
 R19
 Epc_test_vhd_vec_tst
-Z20 w1716009694
+Z20 w1716086438
 R7
 R8
 R10
-Z21 8Waveform2.vwf.vht
-Z22 FWaveform2.vwf.vht
+Z21 8Waveform3.vwf.vht
+Z22 FWaveform3.vwf.vht
 l0
 L31
 VFX[zziEYYBKR9>@RQaH@`0
 !s100 TO9@fhgBB?QC7kzfO4`7W0
 R13
 32
-R14
+Z23 !s110 1716086441
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform2.vwf.vht|
-Z24 !s107 Waveform2.vwf.vht|
+Z24 !s90 -work|work|Waveform3.vwf.vht|
+Z25 !s107 Waveform3.vwf.vht|
 !i113 1
 R18
 R19
 Apc_test_arch
 R7
 R8
-Z25 DEx4 work 19 pc_test_vhd_vec_tst 0 22 FX[zziEYYBKR9>@RQaH@`0
-l106
+Z26 DEx4 work 19 pc_test_vhd_vec_tst 0 22 FX[zziEYYBKR9>@RQaH@`0
+l110
 L33
-Z26 Vhn9fbCc75lZUmj@69]0]R2
-Z27 !s100 VBZd?_I6VP_lQnlFhl;CD0
+Z27 VEEM<ofll4FhJB8kljT7D50
+Z28 !s100 HlhzB?E0@XcNTej4ohD573
 R13
 32
-R14
+R23
 !i10b 1
 R15
-R23
 R24
+R25
 !i113 1
 R18
 R19

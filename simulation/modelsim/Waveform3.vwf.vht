@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/18/2024 12:34:43"
+-- Generated on "05/19/2024 13:34:15"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pc_test
 -- 
@@ -38,6 +38,7 @@ SIGNAL alu_outputpin : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL AM : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
 SIGNAL currentState : STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL dm_out : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL dpcr : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL dprr : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL incrAddr : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -54,6 +55,7 @@ SIGNAL op2OUT : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL OPCode : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL Operand : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL pc_mux_sel : STD_LOGIC;
+SIGNAL prog_mem_instruct : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL r7_outputData : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL reg4_output : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL reset_in : STD_LOGIC;
@@ -73,6 +75,7 @@ COMPONENT pc_test
 	AM : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	clk : IN STD_LOGIC;
 	currentState : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	dm_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	dpcr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 	dprr : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
 	incrAddr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -89,6 +92,7 @@ COMPONENT pc_test
 	OPCode : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	Operand : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	pc_mux_sel : OUT STD_LOGIC;
+	prog_mem_instruct : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	r7_outputData : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	reg4_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	reset_in : IN STD_LOGIC;
@@ -112,6 +116,7 @@ BEGIN
 	AM => AM,
 	clk => clk,
 	currentState => currentState,
+	dm_out => dm_out,
 	dpcr => dpcr,
 	dprr => dprr,
 	incrAddr => incrAddr,
@@ -128,6 +133,7 @@ BEGIN
 	OPCode => OPCode,
 	Operand => Operand,
 	pc_mux_sel => pc_mux_sel,
+	prog_mem_instruct => prog_mem_instruct,
 	r7_outputData => r7_outputData,
 	reg4_output => reg4_output,
 	reset_in => reset_in,

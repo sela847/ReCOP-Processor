@@ -139,7 +139,7 @@ architecture beh of memory_model is
 --	X"001E",
 --	am_direct&ldr&X"0"&X"0",
 	X"0000",    -- (AM)01  -- (OP)000100  -- (RZ)0001  -- (RX)1000  -- (FUNC)400A                    -- (AM)01  -- (OP)000010  -- (RZ)1111  -- (RX)0000  -- (FUNC)ABCF
-	am_direct&strpc&X"0"&X"0",
+	am_immediate&jmp&X"0"&X"0",
 	am_inherent&noop&X"0"&X"0",
 	X"0003",-- (AM)01  -- (OP)111000  -- (RZ)0010  -- (RX)0001  -- (FUNC)0000
    am_immediate&addr&X"0"&X"0",

@@ -312,7 +312,7 @@ begin
                         elsif Opcode = "010100" then -- sz
                             alu_op1_sel <= "01"; -- ir_operand
                             op1_wr <= '1';
-                        elsif Opcode = "101001" then -- datacall
+                        elsif Opcode = "101000" then -- datacall
                             alu_op1_sel <= "00"; -- rx
                             alu_op2_sel <= "01"; -- ir_operand
                             op1_wr <= '1';
@@ -504,13 +504,14 @@ begin
                             rf_input_sel <= "011"; -- RZ = ALUOUT
                         elsif Opcode = "011100" then -- present
                             ld_r <= '0'; -- Don't load anything
-                            write_pc <= '1';
+                            
                             if z_flag = '1' then
+										  write_pc <= '1';
                                 pc_mux_sel <= '0';
                             else
                                 pc_mux_sel <= '1';
                             end if;
-                        elsif Opcode = "101001" then -- datacall immediate
+                        elsif Opcode = "101000" then -- datacall immediate
                             -- DPCR <= OP1 & OP2
                             dpcr_lsb_sel <= '1'; -- Becomes Rz & OPERAND
                             dpcr_wr <= '1';
@@ -518,8 +519,9 @@ begin
                             irq_clr <= '1';
                             pc_mux_sel <= '1';
                         elsif Opcode = "010100" then -- SZ
-									 write_pc <= '1';
+									 
                             if z_flag = '1' then
+										  write_pc <= '1';
                                 pc_mux_sel <= '0';
                             else
                                 pc_mux_sel <= '1';
